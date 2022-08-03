@@ -1,15 +1,33 @@
 #include "filler.h"
-#include "libft.h"
+
+void	panic(char *message)
+{
+	perror(message);
+	exit(EXIT_FAILURE);
+}
 
 
 int main (void)
 {
+	t_info	*info;
 	char *line;
 
-	while(1)
+	info = NULL;
+	while (1)
 	{
-		while(ft_get_next_line(0, &line))
-			print_fd("retour.txt", line);
+		if (!info)
+		{
+			info = (t_info *)malloc(sizeof(*info));
+			if (!info)
+				panic("t_info");
+			ft_get_next_line(0, &line);
+			print_fd("line.txt",line);
+			ft_get_next_line(0, &line);
+			print_fd("plateau.txt", line);
+		}
+		mini_printf("8 2\n");
+		while (ft_get_next_line(0, &line))
+			print_fd("reste.txt", line);
 	}
 	return (0);
 }
