@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: briffard <briffard@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/01 11:59:21 by briffard          #+#    #+#             */
-/*   Updated: 2022/01/07 09:32:12 by briffard         ###   ########.fr       */
+/*   Created: 2022/08/03 11:00:49 by briffard          #+#    #+#             */
+/*   Updated: 2022/08/03 11:00:57 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "mini_printf.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+size_t	write_all(char *str)
 {
-	if (alst && new)
-	{
-		new->next = *alst;
-		*alst = new;
-	}
+	size_t	size;
+
+	size = ft_strlen(str);
+	write (1, str, size);
+	return (size);
 }

@@ -6,11 +6,11 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 11:04:06 by briffard          #+#    #+#             */
-/*   Updated: 2022/05/13 08:09:49 by briffard         ###   ########.fr       */
+/*   Updated: 2022/08/03 11:18:38 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "mini_printf.h"
 
 int			is_bonus(const char *s);
 static int	is_color(const char *s);

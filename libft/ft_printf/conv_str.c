@@ -5,51 +5,62 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/12 11:11:05 by briffard          #+#    #+#             */
-/*   Updated: 2022/05/13 08:25:35 by briffard         ###   ########.fr       */
+/*   Created: 2022/08/03 10:51:51 by briffard          #+#    #+#             */
+/*   Updated: 2022/08/03 11:24:29 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "mini_printf.h"
 
-int			format_str(const char *str, t_parameter *option);
-static void	set_precision(t_parameter *option, const char *str);
-
-static void	set_precision(t_parameter *option, const char *str)
+t_string	*new_node(const char *str)
 {
-	if ((!option->pre && str && !(option->dot)) || \
-	(option->pre > (int)ft_strlen(str) && str))
-		option->pre = ft_strlen(str);
-	if (option->pre < 0)
-		option->pre = ft_strlen(str);
+	t_string	*node;
+
+	node = (t_string *)malloc(sizeof(*node));
+	if (!node)
+		exit(EXIT_FAILURE);
+	node->str = ft_strdup(str);
+	node->size = 0;
+	node->next = NULL;
+	return (node);
 }
 
-int	format_str(const char *str, t_parameter *option)
+t_string	*push_back(t_string *li, t_string *element)
 {
-	int	size;
+	t_string	*temp;
 
-	size = 0;
+	if (li == NULL)
+		return (element);
+	temp = li;
+	while (temp->next != NULL)
+		temp = temp->next;
+	temp->next = element;
+	element->next = NULL;
+	return (li);
+}
+
+void	push_t_string(t_string **li, const char *str)
+{
+	t_string	*element;
+
+	element = new_node(str);
+	*li = push_back(*li, element);
+	(*li)->size += 1;
+}
+
+void	format_str(const char *str, t_string **li)
+{
 	if (str == NULL)
 		str = "(null)";
 	if (is_bonus(str))
 	{
 		ft_putstr(str);
-		return (0);
+		return ;
 	}
-	set_precision(option, str);
-	if (option->dot && !(option->pre))
-		option->pre = 0;
-	size += print_width(option, option->pre);
-	size += print_str(str, option->pre, option);
-	if (option->flags & F_MINUS)
-		size += align_right(size, option->width);
-	return (size);
+	push_t_string(li, str);
 }
 
-/*
-** TURN ARGUMENT TO STR
-*/
-int	conv_to_str(t_parameter *li, va_list ap)
+void	conv_to_str(t_string **li, va_list ap)
 {
-	return (format_str(va_arg(ap, char *), li));
+	format_str(va_arg(ap, char *), li);
 }
