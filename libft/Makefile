@@ -6,11 +6,11 @@
 #    By: briffard <briffard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/12 08:21:48 by briffard          #+#    #+#              #
-#    Updated: 2022/08/03 11:22:12 by briffard         ###   ########.fr        #
+#    Updated: 2022/08/03 12:01:51 by briffard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	libftprintf.a
+NAME	=	libft.a
 
 #COMPILATION
 CC		=	gcc

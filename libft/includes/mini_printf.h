@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 11:28:45 by briffard          #+#    #+#             */
-/*   Updated: 2022/08/03 11:35:00 by briffard         ###   ########.fr       */
+/*   Updated: 2022/08/03 11:53:38 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,6 @@ int				mini_printf(const char *formart, ...);
 void			push_t_string(t_string **li, const char *str);
 t_string		*new_node(const char *str);
 size_t			write_all(char *str);
+int				is_bonus(const char *s);
 
 #endif

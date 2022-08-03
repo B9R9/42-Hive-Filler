@@ -1,12 +1,69 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: briffard <briffard@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/08/03 11:42:00 by briffard          #+#    #+#              #
+#    Updated: 2022/08/03 12:32:49 by briffard         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
 NAME = briffard.filler
 
+#COMPILATION
+CC		=	gcc
+CCFLAGS	=	-Werror -Wextra -Wall
+LIB_LFT	=	-L ./libft/ -lft
+
+#INCLUDE
+INCL	=	-I ./includes
+INCL_LFT=	-I ./libft/includes
+
+#CLEAN & FCLEAN
+RM_DIR	=	rm -rf
+RM		=	rm	-f
+
+#SOURCE FILES
+SRC_DIR	=	./src/
+FILES	=	main.c utils.c \
+
+#OBJECT FILES
+OBJ_DIR			=	./objectFiles/
+OBJS		=	$(addprefix $(OBJ_DIR), $(FILES:%.c=%.o))
+
 all: $(NAME)
 
-$(NAME):
-	@echo "Creation player: briffard"
-	gcc -o myplayer/briffard.filler  src/*.c  -L libft/ -lft -I includes/ -I libft/includes/
-	if [ -e "/home/chopper/workspace/Filler/myplayer/briffard.filler"]
-		@echo "Player created"
+$(NAME): $(OBJS)
+	@$(CC) $(CCFLAGS) -o $(NAME) $(OBJS) $(LIB_LFT)
 
-./resources/filler_vm -p1 myplayer/briffard.filler -p2 myplayer/briffard.filler -f ./resources/maps/map00
+$(OBJ_DIR)%.o:$(SRC_DIR)%.c
+	@mkdir -p $(OBJ_DIR)
+	@$(CC) $(CCFLAGS) $(INCL_LFT) $(INCL) -o $@ -c $<
+
+lft:
+	@make -sC ./libft/ all
+
+re_lft:
+	@make -sC ./libft/ re
+
+clean_lft:
+	@make -sC ./libft/ clean
+
+fclean_lft:
+	@make -sC ./libft/ fclean
+
+clean:
+	@$(RM_DIR) $(OBJ_DIR)
+	@echo "Object Files have been deleted"
+	@$(RM) retour.txt
+	@$(RM) *.trace
+
+fclean: clean
+	@$(RM) $(NAME)
+	@echo "Parsing file has been deleted"
+
+re: fclean all
+
+.PHONY: all re clean fclean
