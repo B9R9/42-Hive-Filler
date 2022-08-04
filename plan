@@ -23,3 +23,10 @@ les infos players ne sont a recupere qu une seule fois.
 la taille du plateau n est a recuperer 1 fois
 on peut directement se rendre au debut de la map pour la mise a jour de la map
 a chaque nouvelle piece un nouvelle map est cree.
+
+
+
+
+En cours:
+	-> recuperer la map et la stocker dans info->map 
+	-> Repetion de la 1er line !!!

@@ -1,33 +1,20 @@
 #include "filler.h"
 
-void	panic(char *message)
-{
-	perror(message);
-	exit(EXIT_FAILURE);
-}
-
-
 int main (void)
 {
 	t_info	*info;
-	char *line;
 
+	info = create_info();
+
+	get_player_info(info);
+	get_map_info(info);
+
+	get_map(info);
+
+	print_fd("info->map.txt", info->map);
+	ft_strdel(&info->map);
+	free(info);
 	info = NULL;
-	while (1)
-	{
-		if (!info)
-		{
-			info = (t_info *)malloc(sizeof(*info));
-			if (!info)
-				panic("t_info");
-			ft_get_next_line(0, &line);
-			print_fd("line.txt",line);
-			ft_get_next_line(0, &line);
-			print_fd("plateau.txt", line);
-		}
-		mini_printf("8 2\n");
-		while (ft_get_next_line(0, &line))
-			print_fd("reste.txt", line);
-	}
+	system("leaks briffard.filler > ret_leaks.txt");
 	return (0);
 }

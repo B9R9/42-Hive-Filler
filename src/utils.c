@@ -17,3 +17,13 @@ void	print_fd(char *filename, char *message)
 		close(fd);
 	}
 }
+
+void	skip_line(t_info *info)
+{
+	char	*line;
+
+	line = NULL;
+	if (ft_get_next_line(0, &line) < 1)
+		panic("In utils.c: skip_line: retour GNL", info);
+	ft_strdel(&line);
+}

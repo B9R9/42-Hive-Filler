@@ -1,3 +1,0 @@
-$$$ exec p1 : [./briffard.filler]
-$$$ exec p1 : [./briffard.filler]
-$$$ exec p1 : [./briffard.filler]

@@ -6,7 +6,7 @@
 #    By: briffard <briffard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/03 11:42:00 by briffard          #+#    #+#              #
-#    Updated: 2022/08/03 12:32:49 by briffard         ###   ########.fr        #
+#    Updated: 2022/08/04 10:13:24 by briffard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,11 @@ RM		=	rm	-f
 
 #SOURCE FILES
 SRC_DIR	=	./src/
-FILES	=	main.c utils.c \
+FILES	=	main.c utils.c		\
+			malloc_handler.c	\
+			exit.c				\
+			value_init.c		\
+			player_info.c		\
 
 #OBJECT FILES
 OBJ_DIR			=	./objectFiles/
@@ -57,7 +61,7 @@ fclean_lft:
 clean:
 	@$(RM_DIR) $(OBJ_DIR)
 	@echo "Object Files have been deleted"
-	@$(RM) retour.txt
+	@$(RM) *.txt
 	@$(RM) *.trace
 
 fclean: clean
