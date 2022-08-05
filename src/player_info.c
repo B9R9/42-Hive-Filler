@@ -6,16 +6,17 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 09:14:08 by briffard          #+#    #+#             */
-/*   Updated: 2022/08/04 12:06:32 by briffard         ###   ########.fr       */
+/*   Updated: 2022/08/05 13:41:01 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
 
-/*
+/* *
  * Doit on verifier que toutes la lignes soientt exactement les memes ou juste
- * focus sur les parties qui nous interresse*/
+ * focus sur les parties qui nous interresse
+ * */
 void	get_player_info(t_info *info)
 {
 	char	*line;
@@ -50,6 +51,8 @@ void	get_map_info(t_info *info)
 	if (info->col < 1)
 		panic("In get_map_info: get_map_info: col dimension", info);
 	ft_strdel(&line);
+	if (info->player == 2)
+		info->symbol = 'X'
 }
 
 void	get_map(t_info *info)
@@ -61,14 +64,16 @@ void	get_map(t_info *info)
 	line = NULL;
 	index = 0;
 	skip_line(info);
-	while(index < info->line)
+	while(index < info->line - 1)
 	{
 		if (ft_get_next_line(0, &line) < 1)
 			panic("In player_info.c: get_map: ret_GNL", info);
 		if (!info->map)
 		{
 			info->map = ft_strdup(line);
-			skip_line(info);
+			ft_strdel(&line);
+			if (ft_get_next_line(0, &line) < 1)
+				panic("BYE BYE\n", info);
 		}
 		temp = ft_strjoin(info->map, line);
 		if (!temp)
@@ -77,5 +82,6 @@ void	get_map(t_info *info)
 		ft_strdel(&line);
 		info->map = temp;
 		index++;
+		print_fd("test.txt", info->map);
 	}
 }
