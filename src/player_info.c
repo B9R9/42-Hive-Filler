@@ -6,17 +6,17 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 09:14:08 by briffard          #+#    #+#             */
-/*   Updated: 2022/08/04 12:06:32 by briffard         ###   ########.fr       */
+/*   Updated: 2022/08/05 13:41:01 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
 
-
-/*
+/* *
  * Doit on verifier que toutes la lignes soientt exactement les memes ou juste
- * focus sur les parties qui nous interresse*/
+ * focus sur les parties qui nous interresse
+ * */
 void	get_player_info(t_info *info)
 {
 	char	*line;
@@ -51,6 +51,8 @@ void	get_map_info(t_info *info)
 	if (info->col < 1)
 		panic("In get_map_info: get_map_info: col dimension", info);
 	ft_strdel(&line);
+	if (info->player == 2)
+		info->symbol = 'X';
 }
 
 void	get_map(t_info *info)
@@ -58,8 +60,6 @@ void	get_map(t_info *info)
 	skip_line(info);
 	get_lines(info->line, &info->map);
 }
-
-
 
 t_piece	*get_piece(t_info *info)
 {
@@ -84,21 +84,3 @@ t_piece	*get_piece(t_info *info)
 	print_fd("piece.txt", piece->piece);
 	return (piece);
 }
-
-/*
-donc on a la piece, on record line et col, on record la piece dans une struct pareil que la map.
-and then...?
-then il faut la placer, ie
-lire la map. analyser la map
-placer au bon endroit ie:
-- pas hors cadre
-- doit superposer une de nos previous pieces
-- doit etre un minimum intelligent pour gagner
-
-comment on place la piece? en affichant sur stdout les coordonnees...?
-
-
-estce que c utile de passer info et de la free si on exit...?
-passer new aussi mais du coup...?
-
-*/

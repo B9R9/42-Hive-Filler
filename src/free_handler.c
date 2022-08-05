@@ -5,6 +5,7 @@ void	free_info(t_info **info)
 	if (info && *info)
 	{
 		ft_strdel(&((*info)->map));
+		//ft_strdel((*info)->d_map);
 		free(*info);
 		*info = NULL;
 	}

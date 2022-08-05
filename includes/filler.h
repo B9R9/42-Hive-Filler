@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 11:54:54 by briffard          #+#    #+#             */
-/*   Updated: 2022/08/04 11:55:43 by briffard         ###   ########.fr       */
+/*   Updated: 2022/08/05 13:41:45 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,17 @@ typedef struct s_info
 {
 	unsigned short	player;
 	unsigned short	opposite;
+	char			symbol;
 	unsigned int	line;
 	unsigned int	col;
 	char			*map;
+	char			**d_map;
 }	t_info;
 
 /*malloc_hander*/
 t_info	*create_info(void);
 t_piece	*create_piece(void);
+char	**create_d_map(t_info *info);
 
 /*set_struct*/
 void	set_info(t_info *info);
@@ -53,6 +56,9 @@ void	get_player_info(t_info *info);
 void	get_map_info(t_info *info);
 void	get_map(t_info *info);
 t_piece	*get_piece(t_info *info);
+
+/*set map*/
+void	set_map(t_info *info);
 
 /*remove*/
 void	print_fd(char *filename, char *message);

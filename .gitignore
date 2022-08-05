@@ -58,5 +58,6 @@ dkms.conf
 
 .gitignore
 briffard.filler
+filler.trace
 *.txt
 filler.trace

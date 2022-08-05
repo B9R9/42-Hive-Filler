@@ -6,7 +6,7 @@
 #    By: briffard <briffard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/03 11:42:00 by briffard          #+#    #+#              #
-#    Updated: 2022/08/04 10:13:24 by briffard         ###   ########.fr        #
+#    Updated: 2022/08/05 11:46:05 by briffard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ FILES	=	main.c utils.c		\
 			player_info.c		\
 			free_handler.c		\
 			get_lines.c			\
+			set_map.c			\
 
 #OBJECT FILES
 OBJ_DIR			=	./objectFiles/

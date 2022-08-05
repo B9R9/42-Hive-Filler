@@ -9,9 +9,8 @@ int main (void)
 
 	get_player_info(info);
 	get_map_info(info);
-
 	get_map(info);
-
+	set_map(info);
 	print_fd("info->map.txt", info->map);
 	piece = get_piece(info);
 	free_info(&info);
