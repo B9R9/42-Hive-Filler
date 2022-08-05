@@ -32,6 +32,8 @@ FILES	=	main.c utils.c		\
 			exit.c				\
 			value_init.c		\
 			player_info.c		\
+			free_handler.c		\
+			get_lines.c			\
 
 #OBJECT FILES
 OBJ_DIR			=	./objectFiles/

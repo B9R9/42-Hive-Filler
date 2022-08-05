@@ -3,6 +3,7 @@
 int main (void)
 {
 	t_info	*info;
+	t_piece	*piece;
 
 	info = create_info();
 
@@ -12,9 +13,9 @@ int main (void)
 	get_map(info);
 
 	print_fd("info->map.txt", info->map);
-	ft_strdel(&info->map);
-	free(info);
-	info = NULL;
+	piece = get_piece(info);
+	free_info(&info);
+	free_piece(&piece);
 	system("leaks briffard.filler > ret_leaks.txt");
 	return (0);
 }

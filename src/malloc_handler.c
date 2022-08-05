@@ -22,3 +22,16 @@ t_info	*create_info(void)
 	ft_bzero(new, sizeof (t_info));
 	return (new);
 }
+
+t_piece	*create_piece(void)
+{
+	t_piece	*new;
+
+	new = (t_piece *)malloc(sizeof(t_piece));
+	if (!new)
+		panic("In malloc_handler: create_piece", NULL);
+	ft_bzero(new, sizeof (t_piece));
+	new->line = 0;
+	new->col = 0;
+	return (new);
+}

@@ -15,10 +15,6 @@
 void	panic(char *message, t_info *info)
 {
 	perror(message);
-	if (info)
-	{
-		free(info);
-		info = NULL;
-	}
+	free_info(&info);
 	exit(EXIT_FAILURE);
 }

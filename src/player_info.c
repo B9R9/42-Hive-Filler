@@ -13,6 +13,7 @@
 #include "filler.h"
 
 
+
 /*
  * Doit on verifier que toutes la lignes soientt exactement les memes ou juste
  * focus sur les parties qui nous interresse*/
@@ -21,7 +22,7 @@ void	get_player_info(t_info *info)
 	char	*line;
 
 	line = NULL;
-	if (ft_get_next_line(0, &line) < 0)
+	if (ft_get_next_line(0, &line) < 1)
 		panic("In player_info: get_player_info: retour GNL", info);
 	if (ft_strncmp("$$$ exec p", line, 10) != 0)
 		panic("Error player info: strcmp", info);
@@ -39,7 +40,7 @@ void	get_map_info(t_info *info)
 	char	*line;
 
 	line = NULL;
-	if (ft_get_next_line(0, &line) < 0)
+	if (ft_get_next_line(0, &line) < 1)
 		panic("In player_info: get_map_info: GNL ret", info);
 	if (strncmp("Plateau", line, ft_strlen("Plateau")) != 0)
 		panic("In get_map_info: get_map_info: Checking beginning", info);
@@ -54,28 +55,50 @@ void	get_map_info(t_info *info)
 
 void	get_map(t_info *info)
 {
+	skip_line(info);
+	get_lines(info->line, &info->map);
+}
+
+
+
+t_piece	*get_piece(t_info *info)
+{
+	(void)info;
 	char	*line;
-	size_t	index;
-	char	*temp;
+	t_piece	*piece;
 
 	line = NULL;
-	index = 0;
-	skip_line(info);
-	while(index < info->line)
-	{
-		if (ft_get_next_line(0, &line) < 1)
-			panic("In player_info.c: get_map: ret_GNL", info);
-		if (!info->map)
-		{
-			info->map = ft_strdup(line);
-			skip_line(info);
-		}
-		temp = ft_strjoin(info->map, line);
-		if (!temp)
-			panic("in player_info.c: get_map:", info);
-		ft_strdel(&info->map);
-		ft_strdel(&line);
-		info->map = temp;
-		index++;
-	}
+	if (ft_get_next_line(0, &line) < 1)
+		panic("In get_piece: GNL ret", info);
+	if (strncmp("Piece ", line, ft_strlen("Piece ")) != 0)
+		panic("In get_piece: Checking beginning", info);
+	piece = create_piece();
+	piece->line = ft_atoi(&line[6]);
+	if (piece->line < 0)
+		panic("In get_piece: line dimension", info);
+	piece->col = ft_atoi(&line[6 + ft_numlength(piece->line)]);
+	if (piece->col < 0)
+		panic("In get_piece: col dimension", info);
+	ft_strdel(&line);
+	get_lines(piece->line, &piece->piece);
+	print_fd("piece.txt", piece->piece);
+	return (piece);
 }
+
+/*
+donc on a la piece, on record line et col, on record la piece dans une struct pareil que la map.
+and then...?
+then il faut la placer, ie
+lire la map. analyser la map
+placer au bon endroit ie:
+- pas hors cadre
+- doit superposer une de nos previous pieces
+- doit etre un minimum intelligent pour gagner
+
+comment on place la piece? en affichant sur stdout les coordonnees...?
+
+
+estce que c utile de passer info et de la free si on exit...?
+passer new aussi mais du coup...?
+
+*/
