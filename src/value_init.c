@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 09:40:44 by briffard          #+#    #+#             */
-/*   Updated: 2022/08/05 13:42:19 by briffard         ###   ########.fr       */
+/*   Updated: 2022/08/08 16:08:49 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,5 @@ void	set_info(t_info *info)
 	info->map = NULL;
 	info->d_map = NULL;
 	info->symbol = 'O';
+	info->adv_symbol = 'X';
 }

@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 09:14:08 by briffard          #+#    #+#             */
-/*   Updated: 2022/08/05 13:41:01 by briffard         ###   ########.fr       */
+/*   Updated: 2022/08/08 16:04:49 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,10 @@ void	get_map_info(t_info *info)
 		panic("In get_map_info: get_map_info: col dimension", info);
 	ft_strdel(&line);
 	if (info->player == 2)
+	{
 		info->symbol = 'X';
+		info->adv_symbol = 'O';
+	}
 }
 
 void	get_map(t_info *info)
