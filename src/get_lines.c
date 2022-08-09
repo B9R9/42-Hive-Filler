@@ -20,7 +20,7 @@ void	get_lines(unsigned short nb_lines, char **dst)
 		}
 		tmp = ft_strjoin(*dst, line);
 		if (!tmp)
-			panic("In get_lines: ret_GNL", NULL);
+			panic("In get_lines: retour tmp", NULL);
 		ft_strdel(dst);
 		ft_strdel(&line);
 		*dst = tmp;

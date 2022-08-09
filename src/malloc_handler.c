@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 09:03:00 by briffard          #+#    #+#             */
-/*   Updated: 2022/08/05 13:41:19 by briffard         ###   ########.fr       */
+/*   Updated: 2022/08/09 13:50:24 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ t_info	*create_info(void)
 	ft_bzero(new, sizeof (t_info));
 	return (new);
 }
-
-t_piece	*create_piece(void)
+/*
+t_piece	create_piece(void)
 {
 	t_piece	*new;
 
@@ -35,7 +35,7 @@ t_piece	*create_piece(void)
 	new->col = 0;
 	return (new);
 }
-
+*/
 char	**create_d_map(t_info *info)
 {
 	char	**new;
@@ -44,16 +44,60 @@ char	**create_d_map(t_info *info)
 	size_t	j;
 
 	i = 0;
-	max_line = info->line;
+	max_line = info->map.line;
 	j = 4;
-	new = (char **)malloc(sizeof(char *) * info->line);
+	new = (char **)malloc(sizeof(char *) * max_line);
 	if (!new)
 		panic("In malloc_handler: create_d_map:", info);
 	while (i < max_line)
 	{
-		new[i] = &info->map[j];
-		j += 4 + info->col;
+		new[i] = &info->map.map[j];
+		j += 4 + info->map.col;
 		i++;
 	}
 	return (new);
+}
+
+
+
+t_b_list	*create_element_list(size_t i, size_t j)
+{
+	t_b_list	*new;
+
+	new = (t_b_list *)malloc(sizeof(*new));
+	if (!new)
+		panic("In malloc_handler: create_element", NULL);
+	new->coord = (t_coord) { .line = i, .col = j};
+	new->next = NULL;
+	return (new);
+}
+
+t_b_list	push_front(t_b_list *element, t_b_list *li)
+{
+	if (li == NULL)
+		return (element);
+	element->next = li;
+	return (element);
+}
+
+t_b_list	*create_list(t_info *info)
+{
+	size_t i;
+
+	i = 0;
+	while (i < info->map.line)
+	{
+		j = 0;
+		while (j < info->map.col)
+		{
+			if (ft_toupper(info->map.d_map[i][j]) == info->player.symbol)
+			{
+				element = create_element_list(i, j);
+				info->list = push_front(element, info->list);
+			}
+			j++;
+		}
+		i++;
+	}
+	return (info->list);
 }

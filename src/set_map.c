@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 10:44:46 by briffard          #+#    #+#             */
-/*   Updated: 2022/08/05 13:43:33 by briffard         ###   ########.fr       */
+/*   Updated: 2022/08/09 12:07:16 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	set_map(t_info *info)
 {
-	if (!info->d_map)
-		info->d_map = create_d_map(info);
+	if (!info->map.d_map)
+		info->map.d_map = create_d_map(info);
 }
+

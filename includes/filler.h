@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 11:54:54 by briffard          #+#    #+#             */
-/*   Updated: 2022/08/05 13:41:45 by briffard         ###   ########.fr       */
+/*   Updated: 2022/08/09 13:50:24 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,37 @@ typedef struct s_piece {
 	char			*piece;
 } t_piece;
 
-typedef struct s_info
-{
-	unsigned short	player;
-	unsigned short	opposite;
-	char			symbol;
+typedef struct s_player {
+	char	symbol;
+	unsigned short player;
+}	t_player;
+
+typedef struct s_coordonnee {
+	unsigned int line;
+	unsigned int col;
+}	t_coord;
+
+typedef struct s_map {
 	unsigned int	line;
 	unsigned int	col;
 	char			*map;
 	char			**d_map;
+} t_map;
+
+typedef struct s_block_list {
+	t_coord		coord;
+	struct s_block_list	*next;
+}	t_b_list;
+
+typedef struct s_info
+{
+	t_player	player;
+	t_player	opponent;
+	t_map		map;
+	t_coord		target1;
+	t_coord		target2;
+	t_piece		piece;
+	t_b_list	*list;
 }	t_info;
 
 /*malloc_hander*/
@@ -55,7 +77,7 @@ void	set_info(t_info *info);
 void	get_player_info(t_info *info);
 void	get_map_info(t_info *info);
 void	get_map(t_info *info);
-t_piece	*get_piece(t_info *info);
+void	get_piece(t_info *info);
 
 /*set map*/
 void	set_map(t_info *info);

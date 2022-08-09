@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 09:40:44 by briffard          #+#    #+#             */
-/*   Updated: 2022/08/08 16:08:49 by briffard         ###   ########.fr       */
+/*   Updated: 2022/08/09 09:36:09 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	set_info(t_info *info)
 {
-	info->player = 0;
-	info->opposite = 0;
-	info->line = 0;
-	info->col = 0;
-	info->map = NULL;
-	info->d_map = NULL;
-	info->symbol = 'O';
-	info->adv_symbol = 'X';
+	info->player.player = 1;
+	info->player.symbol = 'O';
+	info->opponent.player = 2;
+	info->opponent.symbol = 'X';
+	info->map.line = 0;
+	info->map.col = 0;
+	info->map.map = NULL;
+	info->map.d_map = NULL;
 }

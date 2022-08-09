@@ -1,5 +1,5 @@
 #include "filler.h"
-
+/*
 void	free_info(t_info **info)
 {
 	if (info && *info)
@@ -10,7 +10,8 @@ void	free_info(t_info **info)
 		*info = NULL;
 	}
 }
-
+*/
+/*
 void	free_piece(t_piece **piece)
 {
 	if (piece && *piece)
@@ -20,3 +21,4 @@ void	free_piece(t_piece **piece)
 		*piece = NULL;
 	}
 }
+*/
