@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 09:03:00 by briffard          #+#    #+#             */
-/*   Updated: 2022/08/09 13:50:24 by briffard         ###   ########.fr       */
+/*   Updated: 2022/08/09 14:47:18 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ t_b_list	*create_element_list(size_t i, size_t j)
 	return (new);
 }
 
-t_b_list	push_front(t_b_list *element, t_b_list *li)
+t_b_list	*push_front(t_b_list *element, t_b_list *li)
 {
 	if (li == NULL)
 		return (element);
@@ -80,9 +80,11 @@ t_b_list	push_front(t_b_list *element, t_b_list *li)
 	return (element);
 }
 
-t_b_list	*create_list(t_info *info)
+t_info	*create_list(t_info *info)
 {
 	size_t i;
+	size_t j;
+	t_b_list	*element;
 
 	i = 0;
 	while (i < info->map.line)
@@ -93,11 +95,16 @@ t_b_list	*create_list(t_info *info)
 			if (ft_toupper(info->map.d_map[i][j]) == info->player.symbol)
 			{
 				element = create_element_list(i, j);
-				info->list = push_front(element, info->list);
+				info->list_player = push_front(element, info->list_player);
+			}
+			else if (ft_toupper(info->map.d_map[i][j]) == info->opponent.symbol)
+			{
+				element = create_element_list(i, j);
+				info->list_opp = push_front(element, info->list_opp);
 			}
 			j++;
 		}
 		i++;
 	}
-	return (info->list);
+	return (info);
 }

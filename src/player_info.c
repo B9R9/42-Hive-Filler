@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 09:14:08 by briffard          #+#    #+#             */
-/*   Updated: 2022/08/09 13:50:24 by briffard         ###   ########.fr       */
+/*   Updated: 2022/08/09 14:46:27 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,8 +104,8 @@ void	get_map(t_info *info)
 	skip_line(info);
 	get_lines(info->map.line, &info->map.map);
 	info->map.d_map = create_d_map(info);
+	info = create_list(info);
 	define_targets(info);
-	info->list = create_list(info);
 
 }
 
