@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 14:26:20 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/18 14:58:39 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/18 23:33:47 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ typedef struct s_filler
 	int			**hamp;		//Hmap de map
 	int 		**test;		// map qui dssine un rectangle entre la you et opp
 	t_coords	soluce;		// coordonnee de la solution a imprime data recupera les point marque par une piece sur le plateau
+	char		*line;		// line pour gnl
 }
 
 
@@ -61,4 +62,23 @@ typedef struct s_filler
 /*malloc_handler -> struct_hander*/
 t_filler	*new_struct(void);
 
+/*set game*/
+void	set_info_game(t_filler *info);
 
+/*exit*/
+void	panic(char *mess, t_filler *info);
+
+/*tool*/
+void	skip_line(t_filler *info);
+char	**adjust_pointer(char **map, char *strmap, t_coords max, int adjust);
+
+/*malloc*/
+char	**set_2d_arr(t_filler *info, int adjust);
+
+/*set piece*/
+void	set_piece(t_filler *info);
+
+/*list_handler*/
+t_list	push_back_piece(t_list *li, int row, int col, t_bool block);
+
+#endif

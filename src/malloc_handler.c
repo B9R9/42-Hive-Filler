@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 09:03:00 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/18 14:58:37 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/18 22:02:14 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 static void	init_struct(t_filler *info)
 {
 	info->player = 0;
-	info->you = 0;
-	info->opp = 0;
+	info->you = 'O';
+	info->opp = 'X';
 	info->map.row = 0;
 	info->map.col = 0;
 	info->map.data = 0;
@@ -34,6 +34,7 @@ static void	init_struct(t_filler *info)
 	info->map = NULL;
 	info->hmap = NULL;
 	info->test = NULL;
+	info->line = NULL;
 }
 
 
