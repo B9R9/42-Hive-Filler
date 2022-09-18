@@ -5,97 +5,55 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/03 11:54:54 by briffard          #+#    #+#             */
-/*   Updated: 2022/08/09 13:50:24 by briffard         ###   ########.fr       */
+/*   Created: 2022/09/18 14:26:20 by briffard          #+#    #+#             */
+/*   Updated: 2022/09/18 14:44:34 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FILLER_H
 # define FILLER_H
 
-/*includes*/
-# include<fcntl.h>
-# include<stdio.h>
-# include<stdlib.h>
-# include<unistd.h>
-# include <string.h>
-# include "libft.h"
+/*INCLUDES*/
+#include <stdio.h>
+#include "libft.h"
 
-typedef enum e_bool{
-	FALSE,
-	TRUE,
-}	t_bool;
+/*STRUCT*/
 
-typedef struct s_piece {
-	unsigned short	line;
-	unsigned short	col;
-	char			*piece;
-} t_piece;
-
-typedef struct s_player {
-	char	symbol;
-	unsigned short player;
-}	t_player;
-
-typedef struct s_coordonnee {
-	unsigned int line;
-	unsigned int col;
-}	t_coord;
-
-typedef struct s_map {
-	unsigned int	line;
-	unsigned int	col;
-	char			*map;
-	char			**d_map;
-} t_map;
-
-typedef struct s_block_list {
-	t_coord		coord;
-	struct s_block_list	*next;
-}	t_b_list;
-
-typedef struct s_info
+typedef	enum
 {
-	t_player	player;
-	t_player	opponent;
-	t_map		map;
-	t_coord		target1;
-	t_coord		target2;
-	t_piece		piece;
-	t_b_list	*list;
-}	t_info;
+	false,
+	true
+}			t_bool;
 
-/*malloc_hander*/
-t_info	*create_info(void);
-t_piece	*create_piece(void);
-char	**create_d_map(t_info *info);
+typedef	struct	s_coords
+{
+	int	row;
+	int	col;
+	int	data;
+}				t_coords;
 
-/*set_struct*/
-void	set_info(t_info *info);
 
-/*player_info*/
-void	get_player_info(t_info *info);
-void	get_map_info(t_info *info);
-void	get_map(t_info *info);
-void	get_piece(t_info *info);
+typedef struct	s_list
+{
+	t_coords	block;
+	struct s_list	*next;
+}				t_list;
 
-/*set map*/
-void	set_map(t_info *info);
+typedef struct s_filler
+{
+	int			player;		//definis si le player se trouve en haut ou en bas
+	char		you;		// definie quel est le symbol attribue au joueur
+	char		opp;		//define quel est le symbol attribue au joueur
+	t_coords	map;		//contient la taille de la map
+	t_coords	piece;		//contient la taille de la piece
+	t_list		*piece;		//list des blocks de la pieces avec leur coord et son type ( * ou .)
+	t_list		*blocks;	// list des blocks sur la map coorespondant au symbol du joueurr
+	char		*strmap;	//map recuperer dans une str
+	char		**map;		//MAp 2d du plateau
+	int			**hamp;		//Hmap de map
+	int 		**test;		// map qui dssine un rectangle entre la you et opp
+	t_coords	soluce;		// coordonnee de la solution a imprime data recupera les point marque par une piece sur le plateau
+}
 
-/*remove*/
-void	print_fd(char *filename, char *message);
 
-/*exit*/
-void	panic(char *message, t_info *info);
 
-/*tools*/
-void	skip_line(t_info *info);
-
-/*free handlers*/
-void	free_info(t_info **info);
-void	free_piece(t_piece **piece);
-
-/*get lines into a string*/
-void	get_lines(unsigned short nb_lines, char **dst);
-
-#endif
