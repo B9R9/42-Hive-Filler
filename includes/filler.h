@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 14:26:20 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/18 14:44:34 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/18 14:58:39 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,5 +55,10 @@ typedef struct s_filler
 	t_coords	soluce;		// coordonnee de la solution a imprime data recupera les point marque par une piece sur le plateau
 }
 
+
+/*prototype*/
+
+/*malloc_handler -> struct_hander*/
+t_filler	*new_struct(void);
 
 

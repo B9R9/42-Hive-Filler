@@ -6,11 +6,21 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 08:49:07 by briffard          #+#    #+#             */
-/*   Updated: 2022/04/04 10:05:29 by briffard         ###   ########.fr       */
+/*   Updated: 2022/08/09 15:31:29 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+
+void	swap(char *a, char *b)
+{
+	char	swap;
+
+	swap = *a;
+	*a = *b;
+	*b = swap;
+}
 
 char	*ft_reverse_str(char *str)
 {
@@ -28,7 +38,7 @@ char	*ft_reverse_str(char *str)
 		i = 0;
 		while (i < (max - x) && str[i + 1] != '\0')
 		{
-			ft_swap (&str[i], &str[i + 1]);
+			swap (&str[i], &str[i + 1]);
 			i++;
 		}
 		x++;

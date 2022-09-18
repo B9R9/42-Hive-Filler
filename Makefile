@@ -6,7 +6,7 @@
 #    By: briffard <briffard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/03 11:42:00 by briffard          #+#    #+#              #
-#    Updated: 2022/08/05 11:46:05 by briffard         ###   ########.fr        #
+#    Updated: 2022/09/18 14:23:31 by briffard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,7 @@ clean:
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "Parsing file has been deleted"
+	@echo "Player file has been deleted"
 
 re: fclean all
 

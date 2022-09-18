@@ -6,15 +6,15 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 09:41:55 by briffard          #+#    #+#             */
-/*   Updated: 2022/04/23 17:12:11 by briffard         ###   ########.fr       */
+/*   Updated: 2022/08/09 15:25:21 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_swap(char *a, char *b)
+void	ft_swap(int *a, int *b)
 {
-	char	swap;
+	int	swap;
 
 	swap = *a;
 	*a = *b;
