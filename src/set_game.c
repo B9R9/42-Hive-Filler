@@ -6,14 +6,14 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 21:34:54 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/18 22:56:52 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/19 12:49:31 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
 
-void	get_symbol(t_filler *info)
+static void	get_symbol(t_filler *info)
 {
 	if (ft_get_next_line(0, &info->line) < 1)
 		panic("Retour GNL\n", info);
@@ -27,12 +27,12 @@ void	get_symbol(t_filler *info)
 	ft_strdel(&info->line);
 }
 
-void	get_plateau_size(t_filler *info)
+static void	get_plateau_size(t_filler *info)
 {
 	info->line = NULL;
 	if (ft_get_next_line(0, &info->line) < 1)
 		panic ("Retour GNL\n", info);
-	if (ft_strcmp(info->line, "Plateau", 7) != 0)
+	if (ft_strncmp(info->line, "Plateau", 7) != 0)
 		panic ("No match for plateau line\n", info);
 	info->map.row = ft_atoi(&info->line[7]);
 	if (info->map.row < 1)
@@ -45,7 +45,7 @@ void	get_plateau_size(t_filler *info)
 	skip_line(info);
 }
 
-int		set_player(char **map, t_coords max, char symbol)
+static int		set_player(char **map, t_coords max, char symbol)
 {
 	int	i;
 	int	j;
@@ -64,12 +64,36 @@ int		set_player(char **map, t_coords max, char symbol)
 		}
 		i++;
 	}
+	return (0);
+}
+
+void	set_list_block(t_filler *info)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < info->map.row)
+	{
+		j = 0;
+		while (j < info->map.col)
+		{
+			if (info->map2d[i][j] == info->you && not_in(info->li_blocks, i, j))
+				info->li_blocks = push_back_piece(info->li_blocks, i, j, info->hmap[i][j]);
+			j++;
+		}
+		i++;
+	}
+	info->li_blocks = order_by_zone(info->li_blocks);
 }
 
 void	set_info_game(t_filler *info)
 {
 	get_symbol(info);
 	get_plateau_size(info);
-	info->map = set_2d_arr(info, 4);
-	info_player = set_player(info->map2d, info->map, info->you);
+	info->map2d = set_2d_arr(info, 4);
+	info->player = set_player(info->map2d, info->map, info->you);
+	info->hmap = set_hmap(info);
+	info->test = set_test(info);
+	set_list_block(info);
 }

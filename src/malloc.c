@@ -6,11 +6,47 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 22:26:39 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/18 22:56:52 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/19 12:47:51 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
+
+static void	init_struct(t_filler *info)
+{
+	info->player = 0;
+	info->you = 'O';
+	info->opp = 'X';
+	info->map.row = 0;
+	info->map.col = 0;
+	info->map.data = 0;
+	info->soluce.row = 0;
+	info->soluce.col = 0;
+	info->soluce.data = 0;
+	info->piece.row = 0;
+	info->piece.col = 0;
+	info->piece.data = 0;
+	info->li_piece = NULL;
+	info->li_blocks = NULL;
+	info->strmap = NULL;
+	info->map2d = NULL;
+	info->hmap = NULL;
+	info->test = NULL;
+	info->line = NULL;
+}
+
+t_filler	*new_struct(void)
+{
+	t_filler	*new;
+
+	new = (t_filler *)malloc(sizeof(*new));
+	if (!new)
+		panic("In malloc_handler: create_info", new);
+	ft_bzero(new, sizeof (t_filler));
+	init_struct(new);
+	return (new);
+}
+
 
 void	save_map(int max_row, t_filler *info)
 {

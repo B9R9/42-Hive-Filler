@@ -6,7 +6,7 @@
 #    By: briffard <briffard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/03 11:42:00 by briffard          #+#    #+#              #
-#    Updated: 2022/09/18 14:23:31 by briffard         ###   ########.fr        #
+#    Updated: 2022/09/19 13:12:03 by briffard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,14 +27,19 @@ RM		=	rm	-f
 
 #SOURCE FILES
 SRC_DIR	=	./src/
-FILES	=	main.c utils.c		\
-			malloc_handler.c	\
-			exit.c				\
-			value_init.c		\
-			player_info.c		\
-			free_handler.c		\
-			get_lines.c			\
-			set_map.c			\
+FILES	=	can_we_place.c \
+			clean.c \
+			list_handler.c \
+			main.c \
+			malloc.c \
+			set_game.c \
+			set_hmap_2.c \
+			set_hmap.c \
+			set_piece.c \
+			set_test.c \
+			set_test_2.c \
+			solver.c \
+			tools.c \
 
 #OBJECT FILES
 OBJ_DIR			=	./objectFiles/
