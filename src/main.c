@@ -14,7 +14,7 @@ void	reset(t_filler *info)
 	info->soluce.data = 0;
 }
 
-char	**update_map(t_filler *info)
+char	**update_map_opp(t_filler *info)
 {
 	int		i;
 	int		j;
@@ -41,9 +41,28 @@ char	**update_map(t_filler *info)
 	return (info->map2d);
 }
 
+char	**update_map(t_filler *info)
+{
+	t_coords	coords[info->size_piece];
+	t_list		*ref_block;
+	int			i;
+
+	i = 0;
+	ref_block = create_node(info->soluce.row, info->soluce.col, 0);
+	init_coord(coords, info->size_piece);
+	coord_generator(coords, ref_block, info->li_piece, info->li_piece);
+	while (i < info->size_piece)
+	{
+		info->map2d[coords[i].row][coords[i].col] = info->you;
+		i++;
+	}
+	return (info->map2d);
+}
+
 void	update(t_filler *info)
 {
 	info->map2d = update_map(info);
+	info->map2d = update_map_opp(info);
 	info->hmap = init_value(info->hmap, info->map.row, info->map.col);
 	info->hmap = set_hmap(info);
 	info->test = init_value(info->test, info->map.row, info->map.col);

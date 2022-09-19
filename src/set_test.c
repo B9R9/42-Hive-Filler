@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 10:48:30 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/19 12:54:25 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/19 13:35:11 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,7 @@ int	**fill_test_map(t_filler *info)
 	start = define_start(info);
 	end = define_end(info);
 	info->test = fill_top(start, end,info->test);
+	dprintf(2, "map: %d %d\n", info->map.row, info->map.col);
 	info->test = fill_down(start, end, info->test);
 	return (info->test);
 }

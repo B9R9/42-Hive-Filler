@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 23:34:11 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/19 13:07:49 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/19 13:57:25 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,10 +64,9 @@ void	place(t_filler *info, t_coords coords[])
 			counter += 3;
 		i++;
 	}
-	if (counter > info->soluce.data)
+	if (counter >= info->soluce.data)
 		info->soluce = (t_coords)\
 			{.row = coords[0].row, .col = coords[0].col, .data = counter};
-
 }
 
 void	find_place(t_filler *info)
@@ -78,12 +77,25 @@ void	find_place(t_filler *info)
 
 	ref_block = create_node(0, 0 , 0);
 	position = 0;
-	while (position < info->size_piece)
+		for(int x = 0; x < info->map.row; x++)
+		{	
+			for (int y = 0; y < info->map.col; y++)
+				dprintf(2, "%d ", info->test[x][y]);
+			dprintf(2,"\n");
+		}
+		dprintf(2, "\n");
+	while (position < info->map.row * info->map.col)
 	{
 		ref_block->block.row = position / info->map.col;
 		ref_block->block.col = position % info->map.col;
 		init_coord(new_coords, info->size_piece);
 		coord_generator(new_coords, ref_block,info->li_piece, info->li_piece);
+		// for(int x = 0; x < info->size_piece; x++)
+		// {	
+		// 	dprintf(2, "COORDs: %d %d \n", new_coords[x].row, new_coords[x].col);
+		// 	dprintf(2,"\n");
+		// }
+		// dprintf(2, "\n");
 		if (we_can_place(new_coords, info))
 			place(info, new_coords);
 		position++;
@@ -103,5 +115,6 @@ void	solver(t_filler *info)
 	}
 	if (info->soluce.data == 0)
 		find_place(info);
+	dprintf(2, "solution: %d %d\n",info->soluce.row, info->soluce.col);
 	print_soluce(info->soluce);
 }

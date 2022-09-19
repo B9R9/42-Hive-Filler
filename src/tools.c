@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 22:18:09 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/19 13:11:18 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/19 13:20:48 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	skip_line(t_filler *info)
 	info->line = NULL;
 	if (ft_get_next_line(0, &info->line) < 1)
 		panic("Retour Skip_line\n", info);
+	dprintf(2, "line->%s\n", info->line);
 	ft_strdel(&info->line);
 }
 
