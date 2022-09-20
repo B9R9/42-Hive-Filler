@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 11:13:30 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/19 14:00:35 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/20 09:49:25 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,14 +65,14 @@ t_coords	define_end(t_filler *info)
 
 int			**fill_down(t_coords start, t_coords end, int **map)
 {
-	while (start.row <= end.row)
+	while (start.row < end.row)
 	{
 		map[start.row][start.col] = 1;
 		// map[start.row][start.col + 1] = 2;
 		start.row++;
 	}
 	start.row--;
-	while (start.col <= end.col)
+	while (start.col < end.col)
 	{
 		map[start.row][start.col] = 1;
 		// map[start. row - 1][start.col] = 2;
@@ -83,14 +83,14 @@ int			**fill_down(t_coords start, t_coords end, int **map)
 
 int			**fill_top(t_coords start, t_coords end, int **map)
 {
-	while (start.col <= end.col)
+	while (start.col < end.col)
 	{
 		map[start.row][start.col] = 1;
 		// map[start. row + 1][start.col] = 2;
 		start.col++;
 	}
 	start.col--;
-	while (start.row <= end.row)
+	while (start.row < end.row)
 	{
 		map[start.row][start.col] = 1;
 		// map[start.row][start.col - 1] = 2;
