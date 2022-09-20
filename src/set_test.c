@@ -69,8 +69,7 @@ int	**fill_test_map(t_filler *info)
 
 	start = define_start(info);
 	end = define_end(info);
-	info->test = fill_top(start, end,info->test);
-	dprintf(2, "map: %d %d\n", info->map.row, info->map.col);
+	// info->test = fill_top(start, end,info->test);
 	info->test = fill_down(start, end, info->test);
 	return (info->test);
 }

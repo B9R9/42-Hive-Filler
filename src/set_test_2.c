@@ -68,12 +68,14 @@ int			**fill_down(t_coords start, t_coords end, int **map)
 	while (start.row <= end.row)
 	{
 		map[start.row][start.col] = 1;
+		// map[start.row][start.col + 1] = 2;
 		start.row++;
 	}
 	start.row--;
 	while (start.col <= end.col)
 	{
 		map[start.row][start.col] = 1;
+		// map[start. row - 1][start.col] = 2;
 		start.col++;
 	}
 	return (map);
@@ -84,12 +86,14 @@ int			**fill_top(t_coords start, t_coords end, int **map)
 	while (start.col <= end.col)
 	{
 		map[start.row][start.col] = 1;
+		// map[start. row + 1][start.col] = 2;
 		start.col++;
 	}
 	start.col--;
 	while (start.row <= end.row)
 	{
 		map[start.row][start.col] = 1;
+		// map[start.row][start.col - 1] = 2;
 		start.row++;
 	}
 	return (map);

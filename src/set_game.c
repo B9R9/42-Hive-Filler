@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 21:34:54 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/19 12:49:31 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/19 16:38:13 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,20 @@ static int		set_player(char **map, t_coords max, char symbol)
 	return (0);
 }
 
+t_list	*set_zone(t_filler *info)
+{
+	t_list	*temp;
+
+	temp = info->li_blocks;
+
+	while (temp != NULL)
+	{
+		temp->block.data = info->hmap[temp->block.row][temp->block.col];
+		temp = temp->next;
+	}
+	return(info->li_blocks);
+}
+
 void	set_list_block(t_filler *info)
 {
 	int	i;
@@ -84,7 +98,8 @@ void	set_list_block(t_filler *info)
 		}
 		i++;
 	}
-	info->li_blocks = order_by_zone(info->li_blocks);
+	info->li_blocks = set_zone(info);
+	info->li_blocks = order_by_zone(info->li_blocks, info->player);
 }
 
 void	set_info_game(t_filler *info)
@@ -94,6 +109,6 @@ void	set_info_game(t_filler *info)
 	info->map2d = set_2d_arr(info, 4);
 	info->player = set_player(info->map2d, info->map, info->you);
 	info->hmap = set_hmap(info);
-	info->test = set_test(info);
 	set_list_block(info);
+	info->test = set_test(info);
 }

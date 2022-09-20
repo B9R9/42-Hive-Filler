@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 22:18:09 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/19 13:20:48 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/19 16:25:03 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	skip_line(t_filler *info)
 	info->line = NULL;
 	if (ft_get_next_line(0, &info->line) < 1)
 		panic("Retour Skip_line\n", info);
-	dprintf(2, "line->%s\n", info->line);
 	ft_strdel(&info->line);
 }
 
@@ -65,6 +64,7 @@ void	coord_generator(t_coords new[], t_list *my_blocks, t_list *ref, t_list *pie
 	{
 		new[i].row = (temp->block.row - ref->block.row) + my_blocks->block.row;
 		new[i].col = (temp->block.col - ref->block.col) + my_blocks->block.col;
+		new[i].data = temp->block.data;
 		temp = temp->next;
 		i++;
 	}

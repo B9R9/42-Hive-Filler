@@ -25,7 +25,7 @@ char	**update_map_opp(t_filler *info)
 	i = 0;
 	while (i < info->map.row)
 	{
-		if (ft_get_next_line(0, &info->line) < 1)
+		if (ft_get_next_line(0, &info->line) <= 0)
 			panic("Retour GNL\n", info);
 		j = 0;
 		while (info->line[j] != '\0')
@@ -53,9 +53,11 @@ char	**update_map(t_filler *info)
 	coord_generator(coords, ref_block, info->li_piece, info->li_piece);
 	while (i < info->size_piece)
 	{
-		info->map2d[coords[i].row][coords[i].col] = info->you;
+		if (coords[i].data)
+			info->map2d[coords[i].row][coords[i].col] = info->you;
 		i++;
 	}
+	ref_block = clean_list(ref_block);
 	return (info->map2d);
 }
 

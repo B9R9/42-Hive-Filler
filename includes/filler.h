@@ -83,7 +83,7 @@ void	set_piece(t_filler *info);
 
 /*list_handler*/
 t_list	*push_back_piece(t_list *li, int row, int col, t_bool block);
-t_list	*order_by_zone(t_list *li);
+t_list	*order_by_zone(t_list *li, int player);
 int		not_in(t_list	*li, int i, int j);
 t_list	*create_node(int row, int col, t_bool block);
 

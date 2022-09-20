@@ -56,9 +56,23 @@ void	swap(t_list *a, t_list *b)
 	b->block.data = swap;
 }
 
-t_list	*order_by_zone(t_list *li)
+int	order_condition(int player, t_list *node, t_list *next)
+{
+	if (player == 1)
+		if (node->block.data > next->block.data && node->block.col > next->block.col)
+			return (true);
+		return (false);
+	if (player == 2)
+		if (node->block.data > next->block.data && node->block.col < next->block.col)
+			return (true);
+		return (false);
+	return (false);
+}
+
+t_list	*order_by_zone(t_list *li, int player)
 {
 	t_list	*temp;
+	(void)player;
 
 	temp = li;
 	while (temp->next != NULL)
