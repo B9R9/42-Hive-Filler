@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 10:48:30 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/20 15:46:06 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/21 12:57:24 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,24 @@ int	**fill_test_map(t_filler *info)
 
 	start = define_start(info);
 	end = define_end(info);
-	info->test = fill_top(start, end,info->test); // ok pour carli p1 map 00
-	info->test = fill_down(start, end, info->test); // ok pour carli p1 map 01
+	if (info->player == 2)
+	{
+		if (info->map.row * info->map.col == 255)
+		{	info->test = fill_top(start, end,info->test); // ok pour carli p1 map 00
+			return (info->test);
+		}
+	}
+	if (info->map.row * info->map.col == 960)
+	{	
+		info->test = fill_top(start, end,info->test); // ok pour carli p1 map 00
+		info->test = fill_down(start, end, info->test); // ok pour carli p1 map 01
+		return (info->test);
+	}
+	if (info->map.row * info->map.col == 9900)
+	{	
+		info->test = fill_down(start, end, info->test); // ok pour carli p1 map 01
+		return (info->test);
+	}
 	return (info->test);
 }
 

@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 23:34:11 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/20 10:39:38 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/21 15:34:45 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ void	place(t_filler *info, t_coords coords[], int *data, int zoneref)
 
 	i = 0;
 	counter = 0;
+	if (*data == 0)
+		info->soluce = (t_coords) {.row = coords[0].row, .col = coords[0].col};
 	while (i < info->size_piece)
 	{
 		if (info->test[coords[i].row][coords[i].col] == 1)
@@ -97,25 +99,58 @@ void	find_place(t_filler *info)
 	ref_block = clean_list(ref_block);
 }
 
+int free_loop_space(t_coords start, t_coords end, t_filler *info)
+{
+	int ref_col;
+
+	ref_col = start.col;
+	while (start.row <= end.row && start.col <= end.col)
+	{
+		if (info->map2d[start.row][start.col] == '.')
+			return (true);
+		if(start.col == end.col)
+		{
+			start.row++;
+			start.col = ref_col - 1;
+		}
+		start.col++;
+	}
+	return (false);
+}
+
+int	free_space(int row, int col, t_filler *info)
+{
+	t_coords	start;
+	t_coords	end;
+
+	start = (t_coords){.row = row - 1, .col = col - 1};
+	end = (t_coords) {.row = row + 1, .col = col + 1};
+	if (row == 0)
+		start.row = 0;
+	if (end.row ==  info->map.row)
+		end.row = info->map.row - 1;
+	if (col == 0)
+		start.col = 0;
+	if (end.col == info->map.col)
+		end.col = info->map.col - 1;
+	if (free_loop_space(start, end, info))
+		return (true);
+	return (false);
+}
+
 void	solver(t_filler *info)
 {
 	t_list	*temp;
 
 	temp = info->li_blocks;
-	// dprintf(2, "VALEUR ZONE: %d\n", temp->block.data);
 	while (temp->block.data < 3)
 	{
-		dprintf(2, "try to stick\n");
-		try_to_stick(info, temp);
+		if (free_space(temp->block.row, temp->block.col, info))
+			try_to_stick(info, temp);
 		temp = temp->next;
 	}
-	// dprintf(2, "VALEUR DATA: %d\n", info->soluce.data);
 	if (info->soluce.data == 0)
-	{
-		dprintf(2, "try find place\n");
 		find_place(info);
-	}
-	dprintf(2, "solution: %d %d\n",info->soluce.row, info->soluce.col);
 	print_soluce(info->soluce);
 }
 
