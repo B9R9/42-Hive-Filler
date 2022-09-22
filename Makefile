@@ -39,6 +39,7 @@ FILES	=	can_we_place.c \
 			set_test.c \
 			set_test_2.c \
 			solver.c \
+			tools_2.c \
 			tools.c \
 
 #OBJECT FILES

@@ -1,6 +1,6 @@
 #include "filler.h"
 
-int  out_of_map(t_coords coord[], t_coords max, int size)
+int  out_of_map(t_coords *coord, t_coords max, int size)
 {
     int i;
 
@@ -21,7 +21,7 @@ int  out_of_map(t_coords coord[], t_coords max, int size)
 
 }
 
-int overlapping_you(t_coords coord[], char **map, t_filler *info, int size)
+int overlapping_you(t_coords *coord, char **map, t_filler *info, int size)
 {
     int     i;
     int     counter;
@@ -39,7 +39,7 @@ int overlapping_you(t_coords coord[], char **map, t_filler *info, int size)
     return (1);
 }
 
-int overlapping_opp(t_coords coord[], char **map, t_filler *info, int size)
+int overlapping_opp(t_coords *coord, char **map, t_filler *info, int size)
 {
     int i;
     int counter;
@@ -55,7 +55,7 @@ int overlapping_opp(t_coords coord[], char **map, t_filler *info, int size)
     return (0);
 }
 
-int  we_can_place(t_coords coord[], t_filler *info)
+int  we_can_place(t_coords *coord, t_filler *info)
 {
 	/*	for(int x = 0; x < info->size_piece; x++)
 		{	

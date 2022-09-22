@@ -66,17 +66,22 @@ void	set_list_block(t_filler *info);
 
 /*exit*/
 void	panic(char *mess, t_filler *info);
+t_filler    *clean_before_exit(t_filler *info);
+
 
 /*tool*/
 void	skip_line(t_filler *info);
 char	**adjust_pointer(char **map, char *strmap, t_coords max, int adjust);
 void	print_soluce(t_coords soluce);
-void    init_coord(t_coords coord[], int size);
-void	coord_generator(t_coords new[], t_list *my_blocks, t_list *ref, t_list *piece);
+void    init_coord(t_coords *coord, int size);
+void	coord_generator(t_coords *new, t_list *my_blocks, t_list *ref, t_list *piece);
+
+int	free_space(int row, int col, t_filler *info);
 
 /*malloc*/
 char	**set_2d_arr(t_filler *info, int adjust);
 t_filler	*new_struct(void);
+t_coords	*new_coords_arr(t_filler *info);
 
 /*set piece*/
 void	set_piece(t_filler *info);
@@ -105,7 +110,7 @@ void	freeArray(int **arr, size_t row);
 void	clean2str(char *s1, char *s2);
 
 /*can we place*/
-int  we_can_place(t_coords coord[], t_filler *info);
+int  we_can_place(t_coords *coord, t_filler *info);
 
 /*solver*/
 void	solver(t_filler *info);

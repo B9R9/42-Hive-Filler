@@ -1,10 +1,16 @@
-ON map02 FOR 1 game:
+ON map02 FOR 5 GAME:
+DETAILS GAMES:
+GAME 1     P1: champely 0 VS 1495 P2: briffard.filler
+GAME 2     P1: briffard.filler 1956 VS 0 P2: champely
+GAME 3     P1: champely 0 VS 1962 P2: briffard.filler
+GAME 4     P1: briffard.filler 2023 VS 0 P2: champely
+GAME 5     P1: champely 0 VS 1940 P2: briffard.filler
 ---------------------------------------------------
 PLAYER              |    %v   |    victory - game |
 --------------------------------------------------
-briffard.filler     |    100%    |       1 - 1   |
+briffard.filler     |    100%    |       5 - 5   |
 --------------------------------------------------
-champely               |   0%  |           0 - 1   |
+champely               |   0%  |           0 - 5   |
 --------------------------------------------------
 
 

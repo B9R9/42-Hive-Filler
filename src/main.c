@@ -87,5 +87,7 @@ int	main(void)
 		update(info);
 		reset(info);
 	}
+	info = clean_before_exit(info);
+	system ("leaks briffard.filler >> leaks.report");
 	return (0);
 }

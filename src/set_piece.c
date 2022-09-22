@@ -51,6 +51,7 @@ static t_list	*set_list_piece(t_filler *info)
 				li = push_back_piece(li, i, j, false);
 			j++;
 		}
+		ft_strdel(&info->line);
 		i++;
 	}
 	return (li);

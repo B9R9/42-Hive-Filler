@@ -1,10 +1,16 @@
-ON map00 FOR 1 game:
+ON map00 FOR 5 GAME:
+DETAILS GAMES:
+GAME 1     P1: carli 53 VS 111 P2: briffard.filler
+GAME 2     P1: briffard.filler 86 VS 81 P2: carli
+GAME 3     P1: carli 94 VS 71 P2: briffard.filler
+GAME 4     P1: briffard.filler 86 VS 80 P2: carli
+GAME 5     P1: carli 54 VS 106 P2: briffard.filler
 ---------------------------------------------------
 PLAYER              |    %v   |    victory - game |
 --------------------------------------------------
-briffard.filler     |    0%    |       0 - 1   |
+briffard.filler     |    100%    |       5 - 5   |
 --------------------------------------------------
-carli               |   100%  |           1 - 1   |
+carli               |   0%  |           0 - 5   |
 --------------------------------------------------
 
 

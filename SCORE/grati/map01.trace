@@ -1,10 +1,16 @@
-ON map01 FOR 1 game:
+ON map01 FOR 5 GAME:
+DETAILS GAMES:
+GAME 1     P1: grati 132 VS 209 P2: briffard.filler
+GAME 2     P1: briffard.filler 233 VS 132 P2: grati
+GAME 3     P1: grati 0 VS 348 P2: briffard.filler
+GAME 4     P1: briffard.filler 270 VS 108 P2: grati
+GAME 5     P1: grati 117 VS 222 P2: briffard.filler
 ---------------------------------------------------
 PLAYER              |    %v   |    victory - game |
 --------------------------------------------------
-briffard.filler     |    100%    |       1 - 1   |
+briffard.filler     |    100%    |       5 - 5   |
 --------------------------------------------------
-grati               |   0%  |           0 - 1   |
+grati               |   0%  |           0 - 5   |
 --------------------------------------------------
 
 

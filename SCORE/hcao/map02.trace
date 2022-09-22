@@ -1,10 +1,16 @@
-ON map02 FOR 1 game:
+ON map02 FOR 5 GAME:
+DETAILS GAMES:
+GAME 1     P1: hcao 404 VS 1536 P2: briffard.filler
+GAME 2     P1: briffard.filler 2008 VS 2 P2: hcao
+GAME 3     P1: hcao 420 VS 1500 P2: briffard.filler
+GAME 4     P1: briffard.filler 1634 VS 263 P2: hcao
+GAME 5     P1: hcao 394 VS 1482 P2: briffard.filler
 ---------------------------------------------------
 PLAYER              |    %v   |    victory - game |
 --------------------------------------------------
-briffard.filler     |    100%    |       1 - 1   |
+briffard.filler     |    100%    |       5 - 5   |
 --------------------------------------------------
-hcao               |   0%  |           0 - 1   |
+hcao               |   0%  |           0 - 5   |
 --------------------------------------------------
 
 

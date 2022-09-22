@@ -90,3 +90,13 @@ char	**set_2d_arr(t_filler *info, int adjust)
 	new = adjust_pointer(new, info->strmap, info->map, adjust);
 	return (new);
 }
+
+t_coords	*new_coords_arr(t_filler *info)
+{
+	t_coords	*new;
+
+	new = (t_coords *)malloc(sizeof(*new) * info->size_piece);
+	if (!new)
+		panic("In malloc.c: new_coords_arr\n", info);
+	return (new);
+}

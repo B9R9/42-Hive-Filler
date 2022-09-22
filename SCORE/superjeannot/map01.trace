@@ -1,10 +1,16 @@
-ON map01 FOR 1 game:
+ON map01 FOR 5 GAME:
+DETAILS GAMES:
+GAME 1     P1: superjeannot 2 VS 356 P2: briffard.filler
+GAME 2     P1: briffard.filler 222 VS 138 P2: superjeannot
+GAME 3     P1: superjeannot 109 VS 225 P2: briffard.filler
+GAME 4     P1: briffard.filler 183 VS 141 P2: superjeannot
+GAME 5     P1: superjeannot 1 VS 324 P2: briffard.filler
 ---------------------------------------------------
 PLAYER              |    %v   |    victory - game |
 --------------------------------------------------
-briffard.filler     |    100%    |       1 - 1   |
+briffard.filler     |    100%    |       5 - 5   |
 --------------------------------------------------
-superjeannot               |   0%  |           0 - 1   |
+superjeannot               |   0%  |           0 - 5   |
 --------------------------------------------------
 
 
