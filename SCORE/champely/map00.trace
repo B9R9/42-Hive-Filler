@@ -1,16 +1,21 @@
-ON map00 FOR 5 GAME:
+ON map00 FOR 10 GAME:
 DETAILS GAMES:
-GAME 1     P1: champely 0 VS 176 P2: briffard.filler
-GAME 2     P1: briffard.filler 172 VS 0 P2: champely
-GAME 3     P1: champely 0 VS 171 P2: briffard.filler
-GAME 4     P1: briffard.filler 166 VS 0 P2: champely
-GAME 5     P1: champely 0 VS 188 P2: briffard.filler
+GAME 1     P1: briffard.filler 166 VS 0 P2: champely
+GAME 2     P1: champely 0 VS 170 P2: briffard.filler
+GAME 3     P1: briffard.filler 164 VS 0 P2: champely
+GAME 4     P1: champely 0 VS 159 P2: briffard.filler
+GAME 5     P1: briffard.filler 155 VS 0 P2: champely
+GAME 6     P1: champely 0 VS 173 P2: briffard.filler
+GAME 7     P1: briffard.filler 160 VS 0 P2: champely
+GAME 8     P1: champely 0 VS 166 P2: briffard.filler
+GAME 9     P1: briffard.filler 150 VS 0 P2: champely
+GAME 10     P1: champely 0 VS 174 P2: briffard.filler
 ---------------------------------------------------
 PLAYER              |    %v   |    victory - game |
 --------------------------------------------------
-briffard.filler     |    100%    |       5 - 5   |
+briffard.filler     |    100%    |       10 - 10   |
 --------------------------------------------------
-champely               |   0%  |           0 - 5   |
+champely               |   0%  |           0 - 10   |
 --------------------------------------------------
 
 

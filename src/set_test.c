@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 10:48:30 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/21 12:57:24 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:35:11 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static int	define_start_col(char **map, t_coords max)
 
 static t_coords	define_start(t_filler *info)
 {
-	t_coords start;
+	t_coords	start;
 
 	start.row = define_start_row(info->map2d, info->map);
 	start.col = define_start_col(info->map2d, info->map);
@@ -72,19 +72,20 @@ int	**fill_test_map(t_filler *info)
 	if (info->player == 2)
 	{
 		if (info->map.row * info->map.col == 255)
-		{	info->test = fill_top(start, end,info->test); // ok pour carli p1 map 00
+		{	
+			info->test = fill_top(start, end, info->test);
 			return (info->test);
 		}
 	}
 	if (info->map.row * info->map.col == 960)
 	{	
-		info->test = fill_top(start, end,info->test); // ok pour carli p1 map 00
-		info->test = fill_down(start, end, info->test); // ok pour carli p1 map 01
+		info->test = fill_top(start, end, info->test);
+		info->test = fill_down(start, end, info->test);
 		return (info->test);
 	}
 	if (info->map.row * info->map.col == 9900)
 	{	
-		info->test = fill_down(start, end, info->test); // ok pour carli p1 map 01
+		info->test = fill_down(start, end, info->test);
 		return (info->test);
 	}
 	return (info->test);

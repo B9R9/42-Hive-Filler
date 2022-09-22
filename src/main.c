@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/09/22 14:43:22 by briffard          #+#    #+#             */
+/*   Updated: 2022/09/22 16:11:16 by briffard         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "filler.h"
 
 void	reset(t_filler *info)
@@ -43,11 +55,12 @@ char	**update_map_opp(t_filler *info)
 
 char	**update_map(t_filler *info)
 {
-	t_coords	coords[info->size_piece];
+	t_coords	*coords;
 	t_list		*ref_block;
 	int			i;
 
 	i = 0;
+	coords = new_coords_arr(info);
 	ref_block = create_node(info->soluce.row, info->soluce.col, 0);
 	init_coord(coords, info->size_piece);
 	coord_generator(coords, ref_block, info->li_piece, info->li_piece);
@@ -58,6 +71,8 @@ char	**update_map(t_filler *info)
 		i++;
 	}
 	ref_block = clean_list(ref_block);
+	free(coords);
+	coords = NULL;
 	return (info->map2d);
 }
 
@@ -71,8 +86,6 @@ void	update(t_filler *info)
 	info->test = set_test(info);
 	set_list_block(info);
 }
-
-
 
 int	main(void)
 {

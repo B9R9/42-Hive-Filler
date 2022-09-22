@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 14:26:20 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/19 13:12:37 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/22 16:17:18 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,8 @@ void    init_coord(t_coords *coord, int size);
 void	coord_generator(t_coords *new, t_list *my_blocks, t_list *ref, t_list *piece);
 
 int	free_space(int row, int col, t_filler *info);
+t_list	*set_zone(t_filler *info);
+t_list	*order_by_zone(t_list *li);
 
 /*malloc*/
 char	**set_2d_arr(t_filler *info, int adjust);
@@ -88,13 +90,13 @@ void	set_piece(t_filler *info);
 
 /*list_handler*/
 t_list	*push_back_piece(t_list *li, int row, int col, t_bool block);
-t_list	*order_by_zone(t_list *li, int player);
 int		not_in(t_list	*li, int i, int j);
 t_list	*create_node(int row, int col, t_bool block);
+void	swap(t_list *a, t_list *b);
 
 /*set_hmap*/
 int		**set_hmap(t_filler *info);
-int		**set_around(int **map, int spot, t_coords max);
+int		**set_around(int spot, t_filler *info);
 int		**new_2d_iarr(t_filler *info);
 int		**init_value(int **arr, int max_row, int max_col);
 
@@ -106,7 +108,7 @@ int			**fill_down(t_coords start, t_coords end, int **map);
 
 /*clean*/
 t_list	*clean_list(t_list *li);
-void	freeArray(int **arr, size_t row);
+void	freearray(int **arr, size_t row);
 void	clean2str(char *s1, char *s2);
 
 /*can we place*/

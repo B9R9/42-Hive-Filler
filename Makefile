@@ -6,7 +6,7 @@
 #    By: briffard <briffard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/03 11:42:00 by briffard          #+#    #+#              #
-#    Updated: 2022/09/19 13:12:03 by briffard         ###   ########.fr        #
+#    Updated: 2022/09/22 16:17:40 by briffard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ RM		=	rm	-f
 SRC_DIR	=	./src/
 FILES	=	can_we_place.c \
 			clean.c \
+			exit.c \
 			list_handler.c \
 			main.c \
 			malloc.c \

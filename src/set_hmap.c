@@ -6,13 +6,13 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 09:33:28 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/19 12:51:22 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/22 16:17:54 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-int		**init_value(int **arr, int max_row, int max_col)
+int	**init_value(int **arr, int max_row, int max_col)
 {
 	int	i;
 	int	j;
@@ -31,8 +31,7 @@ int		**init_value(int **arr, int max_row, int max_col)
 	return (arr);
 }
 
-
-int		**new_2d_iarr(t_filler *info)
+int	**new_2d_iarr(t_filler *info)
 {
 	int			**new;
 	int			i;
@@ -48,7 +47,7 @@ int		**new_2d_iarr(t_filler *info)
 		new[i] = (int *)malloc(sizeof(int) * max.col);
 		if (!new[i])
 		{
-			freeArray(new, i);
+			freearray(new, i);
 			exit(EXIT_FAILURE);
 		}
 		i++;
@@ -57,8 +56,7 @@ int		**new_2d_iarr(t_filler *info)
 	return (new);
 }
 
-//peut etre uliser une liste ?
-int		**set_1aera(int **map, t_coords max, char **ref, char symbol)
+int	**set_1aera(int **map, t_coords max, char **ref, char symbol)
 {
 	int	i;
 	int	j;
@@ -78,40 +76,39 @@ int		**set_1aera(int **map, t_coords max, char **ref, char symbol)
 	return (map);
 }
 
-
-int		**fill_hmap(int **map, t_coords max, int position, int zone)
+int	**fill_hmap(t_filler *info, int position, int zone)
 {
 	int	row;
 	int	col;
 	int	stop;
 
 	stop = 1;
-	while (position < max.col * max.row)
+	while (position < info->map.col * info->map.row)
 	{
-		row = position / max.col;
-		col = position % max.col;
-		if (map[row][col] == 0)
+		row = position / info->map.col;
+		col = position % info->map.col;
+		if (info->hmap[row][col] == 0)
 			stop = 0;
-		if(map[row][col] == zone)
-			map = set_around(map, position, max);
+		if (info->hmap[row][col] == zone)
+			info->hmap = set_around(position, info);
 		position++;
-		if(position == max.col * max.row)
+		if (position == info->map.col * info->map.row)
 		{
 			if (stop)
-				break;
+				break ;
 			stop = 1;
 			position = 0;
 			zone++;
 		}
 	}
-	return (map);
+	return (info->hmap);
 }
 
-int		**set_hmap(t_filler *info)
+int	**set_hmap(t_filler *info)
 {
 	if (!info->hmap)
 		info->hmap = new_2d_iarr(info);
 	info->hmap = set_1aera(info->hmap, info->map, info->map2d, info->opp);
-	info->hmap = fill_hmap(info->hmap, info->map, 0, 1);
+	info->hmap = fill_hmap(info, 0, 1);
 	return (info->hmap);
 }

@@ -6,13 +6,13 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 11:13:30 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/20 09:49:25 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:36:18 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-int			define_end_row(char **map, t_coords max)
+int	define_end_row(char **map, t_coords max)
 {
 	int	i;
 	int	j;
@@ -32,7 +32,7 @@ int			define_end_row(char **map, t_coords max)
 	return (max.row - 1);
 }
 
-int			define_end_col(char **map, t_coords max)
+int	define_end_col(char **map, t_coords max)
 {
 	int	i;
 	int	j;
@@ -52,10 +52,9 @@ int			define_end_col(char **map, t_coords max)
 	return (max.col - 1);
 }
 
-
 t_coords	define_end(t_filler *info)
 {
-	t_coords end;
+	t_coords	end;
 
 	end.row = define_end_row(info->map2d, info->map);
 	end.col = define_end_col(info->map2d, info->map);
@@ -63,37 +62,33 @@ t_coords	define_end(t_filler *info)
 	return (end);
 }
 
-int			**fill_down(t_coords start, t_coords end, int **map)
+int	**fill_down(t_coords start, t_coords end, int **map)
 {
 	while (start.row < end.row)
 	{
 		map[start.row][start.col] = 1;
-		// map[start.row][start.col + 1] = 2;
 		start.row++;
 	}
 	start.row--;
 	while (start.col < end.col)
 	{
 		map[start.row][start.col] = 1;
-		// map[start. row - 1][start.col] = 2;
 		start.col++;
 	}
 	return (map);
 }
 
-int			**fill_top(t_coords start, t_coords end, int **map)
+int	**fill_top(t_coords start, t_coords end, int **map)
 {
 	while (start.col < end.col)
 	{
 		map[start.row][start.col] = 1;
-		// map[start. row + 1][start.col] = 2;
 		start.col++;
 	}
 	start.col--;
 	while (start.row < end.row)
 	{
 		map[start.row][start.col] = 1;
-		// map[start.row][start.col - 1] = 2;
 		start.row++;
 	}
 	return (map);

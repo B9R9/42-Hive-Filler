@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 22:59:09 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/19 16:04:14 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:33:35 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ static t_list	*set_list_piece(t_filler *info)
 		j = 0;
 		while (info->line[j] != '\0')
 		{
-			// li = push_back(li, i, j,(info->line[j] == '*') + 0);
 			if (info->line[j] == '*')
 				li = push_back_piece(li, i, j, true);
 			else
@@ -57,12 +56,9 @@ static t_list	*set_list_piece(t_filler *info)
 	return (li);
 }
 
-
 void	set_piece(t_filler *info)
 {
 	get_size_piece(info);
 	info->li_piece = set_list_piece(info);
-	// for(t_list *temp = info->li_piece; temp != NULL; temp = temp->next)
-	// 	dprintf(2, "PIECE: %d %d %d\n", temp->block.row, temp->block.col, temp->block.data);
 	info->size_piece = info->piece.row * info->piece.col;
 }

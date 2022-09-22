@@ -1,16 +1,21 @@
-ON map02 FOR 5 GAME:
+ON map02 FOR 10 GAME:
 DETAILS GAMES:
-GAME 1     P1: superjeannot 492 VS 1325 P2: briffard.filler
-GAME 2     P1: briffard.filler 1655 VS 193 P2: superjeannot
-GAME 3     P1: superjeannot 414 VS 611 P2: briffard.filler
-GAME 4     P1: briffard.filler 1397 VS 274 P2: superjeannot
-GAME 5     P1: superjeannot 360 VS 1469 P2: briffard.filler
+GAME 1     P1: briffard.filler 1676 VS 279 P2: superjeannot
+GAME 2     P1: superjeannot 1778 VS 106 P2: briffard.filler
+GAME 3     P1: briffard.filler 1442 VS 337 P2: superjeannot
+GAME 4     P1: superjeannot 356 VS 1491 P2: briffard.filler
+GAME 5     P1: briffard.filler 1714 VS 181 P2: superjeannot
+GAME 6     P1: superjeannot 405 VS 1338 P2: briffard.filler
+GAME 7     P1: briffard.filler 1330 VS 312 P2: superjeannot
+GAME 8     P1: superjeannot 467 VS 1287 P2: briffard.filler
+GAME 9     P1: briffard.filler 1719 VS 199 P2: superjeannot
+GAME 10     P1: superjeannot 1664 VS 249 P2: briffard.filler
 ---------------------------------------------------
 PLAYER              |    %v   |    victory - game |
 --------------------------------------------------
-briffard.filler     |    100%    |       5 - 5   |
+briffard.filler     |    80%    |       8 - 10   |
 --------------------------------------------------
-superjeannot               |   0%  |           0 - 5   |
+superjeannot               |   20%  |           2 - 10   |
 --------------------------------------------------
 
 

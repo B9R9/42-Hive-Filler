@@ -1,16 +1,21 @@
-ON map02 FOR 5 GAME:
+ON map02 FOR 10 GAME:
 DETAILS GAMES:
-GAME 1     P1: hcao 404 VS 1536 P2: briffard.filler
-GAME 2     P1: briffard.filler 2008 VS 2 P2: hcao
-GAME 3     P1: hcao 420 VS 1500 P2: briffard.filler
-GAME 4     P1: briffard.filler 1634 VS 263 P2: hcao
-GAME 5     P1: hcao 394 VS 1482 P2: briffard.filler
+GAME 1     P1: briffard.filler 1548 VS 328 P2: hcao
+GAME 2     P1: hcao 399 VS 1574 P2: briffard.filler
+GAME 3     P1: briffard.filler 1630 VS 180 P2: hcao
+GAME 4     P1: hcao 325 VS 1553 P2: briffard.filler
+GAME 5     P1: briffard.filler 1654 VS 325 P2: hcao
+GAME 6     P1: hcao 386 VS 1445 P2: briffard.filler
+GAME 7     P1: briffard.filler 1600 VS 156 P2: hcao
+GAME 8     P1: hcao 358 VS 1581 P2: briffard.filler
+GAME 9     P1: briffard.filler 1657 VS 326 P2: hcao
+GAME 10     P1: hcao 366 VS 469 P2: briffard.filler
 ---------------------------------------------------
 PLAYER              |    %v   |    victory - game |
 --------------------------------------------------
-briffard.filler     |    100%    |       5 - 5   |
+briffard.filler     |    100%    |       10 - 10   |
 --------------------------------------------------
-hcao               |   0%  |           0 - 5   |
+hcao               |   0%  |           0 - 10   |
 --------------------------------------------------
 
 

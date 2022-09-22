@@ -1,16 +1,21 @@
-ON map00 FOR 5 GAME:
+ON map00 FOR 10 GAME:
 DETAILS GAMES:
-GAME 1     P1: abanlin 67 VS 97 P2: briffard.filler
-GAME 2     P1: briffard.filler 84 VS 74 P2: abanlin
-GAME 3     P1: abanlin 64 VS 110 P2: briffard.filler
-GAME 4     P1: briffard.filler 77 VS 80 P2: abanlin
-GAME 5     P1: abanlin 56 VS 112 P2: briffard.filler
+GAME 1     P1: briffard.filler 88 VS 74 P2: abanlin
+GAME 2     P1: abanlin 66 VS 119 P2: briffard.filler
+GAME 3     P1: briffard.filler 148 VS 12 P2: abanlin
+GAME 4     P1: abanlin 62 VS 104 P2: briffard.filler
+GAME 5     P1: briffard.filler 57 VS 98 P2: abanlin
+GAME 6     P1: abanlin 51 VS 113 P2: briffard.filler
+GAME 7     P1: briffard.filler 86 VS 73 P2: abanlin
+GAME 8     P1: abanlin 62 VS 99 P2: briffard.filler
+GAME 9     P1: briffard.filler 108 VS 53 P2: abanlin
+GAME 10     P1: abanlin 60 VS 108 P2: briffard.filler
 ---------------------------------------------------
 PLAYER              |    %v   |    victory - game |
 --------------------------------------------------
-briffard.filler     |    100%    |       5 - 5   |
+briffard.filler     |    100%    |       10 - 10   |
 --------------------------------------------------
-abanlin               |   0%  |           0 - 5   |
+abanlin               |   0%  |           0 - 10   |
 --------------------------------------------------
 
 

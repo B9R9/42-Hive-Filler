@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 23:20:15 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/19 12:46:07 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:46:09 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_list	*create_node(int row, int col, t_bool block)
 	node->block.col = col;
 	node->block.data = block;
 	node->next = NULL;
-return (node);
+	return (node);
 }
 
 t_list	*push_back_piece(t_list *li, int row, int col, t_bool block)
@@ -36,14 +36,14 @@ t_list	*push_back_piece(t_list *li, int row, int col, t_bool block)
 		return (node);
 	temp = li;
 	while (temp->next != NULL)
-		temp =  temp->next;
+		temp = temp->next;
 	temp->next = node;
 	return (li);
 }
 
 void	swap(t_list *a, t_list *b)
 {
-	int swap;
+	int	swap;
 
 	swap = a->block.col;
 	a->block.col = b->block.col;
@@ -59,38 +59,25 @@ void	swap(t_list *a, t_list *b)
 int	order_condition(int player, t_list *node, t_list *next)
 {
 	if (player == 1)
-		if (node->block.data > next->block.data && node->block.col > next->block.col)
+	{
+		if (node->block.data > next->block.data \
+		&& node->block.col > next->block.col)
 			return (true);
 		return (false);
+	}
 	if (player == 2)
-		if (node->block.data > next->block.data && node->block.col < next->block.col)
+	{
+		if (node->block.data > next->block.data \
+			&& node->block.col < next->block.col)
 			return (true);
 		return (false);
+	}
 	return (false);
 }
 
-t_list	*order_by_zone(t_list *li, int player)
+int	not_in(t_list *li, int i, int j)
 {
 	t_list	*temp;
-	(void)player;
-
-	temp = li;
-	while (temp->next != NULL)
-	{
-		if (temp->block.data > temp->next->block.data)
-		{
-			swap(temp, temp->next);
-			temp = li;
-		}
-		else
-			temp = temp->next;
-	}
-	return (li);
-}
-
-int	not_in(t_list	*li, int i, int j)
-{
-	t_list  *temp;
 
 	temp = li;
 	while (temp != NULL)

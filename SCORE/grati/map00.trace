@@ -1,16 +1,21 @@
-ON map00 FOR 5 GAME:
+ON map00 FOR 10 GAME:
 DETAILS GAMES:
-GAME 1     P1: grati 61 VS 106 P2: briffard.filler
-GAME 2     P1: briffard.filler 173 VS 2 P2: grati
-GAME 3     P1: grati 82 VS 92 P2: briffard.filler
-GAME 4     P1: briffard.filler 84 VS 81 P2: grati
-GAME 5     P1: grati 49 VS 113 P2: briffard.filler
+GAME 1     P1: briffard.filler 121 VS 55 P2: grati
+GAME 2     P1: grati 71 VS 81 P2: briffard.filler
+GAME 3     P1: briffard.filler 98 VS 70 P2: grati
+GAME 4     P1: grati 149 VS 1 P2: briffard.filler
+GAME 5     P1: briffard.filler 112 VS 57 P2: grati
+GAME 6     P1: grati 70 VS 101 P2: briffard.filler
+GAME 7     P1: briffard.filler 71 VS 82 P2: grati
+GAME 8     P1: grati 66 VS 99 P2: briffard.filler
+GAME 9     P1: briffard.filler 104 VS 65 P2: grati
+GAME 10     P1: grati 71 VS 104 P2: briffard.filler
 ---------------------------------------------------
 PLAYER              |    %v   |    victory - game |
 --------------------------------------------------
-briffard.filler     |    100%    |       5 - 5   |
+briffard.filler     |    90%    |       9 - 10   |
 --------------------------------------------------
-grati               |   0%  |           0 - 5   |
+grati               |   10%  |           1 - 10   |
 --------------------------------------------------
 
 

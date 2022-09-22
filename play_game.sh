@@ -13,6 +13,7 @@ MYWIN=0
 
 
 mkdir -p $PWD/SCORE/$PLAYER
+
 for MAP in $MAPS
 do
     STRMAP=$(echo $MAP |  cut -d '/' -f 4)
@@ -41,15 +42,21 @@ do
         P1SCORE=$(grep "O fin" $PWD/SCORE/$PLAYER/$STRMAP.result | cut  -d' '  -f 4)
         P2SCORE=$(grep "X fin" $PWD/SCORE/$PLAYER/$STRMAP.result | cut  -d' '  -f 4)
         echo -e "GAME $i     P1: $P1 $P1SCORE VS $P2SCORE P2: $P2" >> $PWD/SCORE/$PLAYER/$STRMAP.trace
-        if ( "$P1" == "$PLAYER" ); then
-            if ( "$P1SCORE" < "$P2SCORE" );then
-		    ENEMYWIN=$(( $ENEMYWIN + 1 ))
-        elif ( "$P2SCORE" < "$P1SCORE" && "$P1" == "$PLAYER" ); then
-		    ENEMYWIN=$(( $ENEMYWIN + 1 ))
-        else
-            MYWIN=$(( $MYWIN + 1 ))
+        if [ "$P2SCORE" -le "$P1SCORE" ];then
+		    if [ "$P1" == "$ME" ]; then
+                MYWIN=$(( $MYWIN + 1 ))
+            fi
+		    if [ "$P1" == "$PLAYER" ]; then
+                ENEMYWIN=$(( $ENEMYWIN + 1 ))
+            fi
+        elif [ "$P1SCORE" -le "$P2SCORE" ];then
+		    if [ "$P2" == "$ME" ]; then
+                MYWIN=$(( $MYWIN + 1 ))
+            fi
+		    if [ "$P2" == "$PLAYER" ]; then
+                MYWIN=$(( $MYWIN + 1 ))
+            fi
         fi
-
         rm -f $PWD/SCORE/$PLAYER/$STRMAP.result
         i=$(( $i + 1 ))
     done

@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 22:26:39 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/19 12:47:51 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:22:07 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ t_filler	*new_struct(void)
 	return (new);
 }
 
-
 void	save_map(int max_row, t_filler *info)
 {
 	char	*temp;
@@ -70,7 +69,7 @@ void	save_map(int max_row, t_filler *info)
 		info->strmap = temp;
 		i++;
 	}
-	info->strmap = ft_strtoupper(info->strmap); //changer pour void fonction
+	info->strmap = ft_strtoupper(info->strmap);
 }
 
 char	**set_2d_arr(t_filler *info, int adjust)
@@ -80,8 +79,8 @@ char	**set_2d_arr(t_filler *info, int adjust)
 	char		**new;
 
 	i = -1;
-	max = (t_coords){ .row = info->map.row, .col = info->map.col};
-	new = (char **)malloc(sizeof(char *) * max.row);
+	max = (t_coords){.row = info->map.row, .col = info->map.col};
+	new = (char **) malloc(sizeof(char *) * max.row);
 	if (!new)
 		panic("In malloc.c: set_2d_arr\n", info);
 	while (++i < max.row)

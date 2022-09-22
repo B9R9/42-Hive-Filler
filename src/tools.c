@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 22:18:09 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/19 16:25:03 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:41:12 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,18 +44,19 @@ void	print_soluce(t_coords soluce)
 	ft_putchar('\n');
 }
 
-void    init_coord(t_coords coord[], int size)
-{
-    int i;
-
-    i = -1;
-    while (++i < size)
-        coord[i] = (t_coords) {.row = 0, .col = 0};
-}
-
-void	coord_generator(t_coords new[], t_list *my_blocks, t_list *ref, t_list *piece)
+void	init_coord(t_coords coord[], int size)
 {
 	int	i;
+
+	i = -1;
+	while (++i < size)
+		coord[i] = (t_coords){.row = 0, .col = 0};
+}
+
+void	coord_generator(t_coords *new, \
+		t_list *my_blocks, t_list *ref, t_list *piece)
+{
+	int		i;
 	t_list	*temp;
 
 	i = 0;
@@ -69,5 +70,3 @@ void	coord_generator(t_coords new[], t_list *my_blocks, t_list *ref, t_list *pie
 		i++;
 	}
 }
-
-
