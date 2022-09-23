@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 14:45:36 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/22 14:45:37 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/23 11:15:17 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,5 @@ void	panic(char *mess, t_filler *info)
 {
 	perror(mess);
 	info = clean_before_exit(info);
-	system ("leaks briffard.filler  >> leaks.report");
 	exit (EXIT_FAILURE);
 }

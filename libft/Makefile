@@ -6,7 +6,7 @@
 #    By: briffard <briffard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/12 08:21:48 by briffard          #+#    #+#              #
-#    Updated: 2022/08/03 12:01:51 by briffard         ###   ########.fr        #
+#    Updated: 2022/09/23 10:36:56 by briffard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,9 +60,9 @@ FTPRINTF_OBJS	=	$(addprefix $(OBJ_DIR), $(FT_PRINTF_SRC:%.c=%.o))
 all: $(NAME)
 
 $(NAME): $(LFT_OBJS) $(FTPRINTF_OBJS)
-	@echo "Creation of libftprintf"
+	@echo "Creation of libft"
 	@ar rcs $(NAME) $(LFT_OBJS) $(FTPRINTF_OBJS)
-	@echo "Libftprintf created."
+	@echo "Libft created."
 	@ranlib $(NAME)
 
 $(OBJ_DIR)%.o:$(SRC_DIR)%.c
@@ -75,11 +75,11 @@ $(OBJ_DIR)%.o:$(FTPRINTF_DIR)%.c
 
 clean:
 	@$(RM_DIR) $(OBJ_DIR)
-	@echo "Object Files directory has been deleted"
+	@echo "LIBFT: Object Files directory has been deleted"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "libftprintf.a file has been deleted"
+	@echo "LIBFT: libft.a file has been deleted"
 
 re: fclean all
 

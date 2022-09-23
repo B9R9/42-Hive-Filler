@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 14:43:22 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/22 16:11:16 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/23 11:15:27 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,5 @@ int	main(void)
 		reset(info);
 	}
 	info = clean_before_exit(info);
-	system ("leaks briffard.filler >> leaks.report");
 	return (0);
 }

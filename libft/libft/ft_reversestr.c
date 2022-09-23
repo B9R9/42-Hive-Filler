@@ -6,12 +6,11 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 08:49:07 by briffard          #+#    #+#             */
-/*   Updated: 2022/08/09 15:31:29 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/23 11:01:13 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 void	swap(char *a, char *b)
 {

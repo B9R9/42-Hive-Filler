@@ -55,8 +55,7 @@ dkms.conf
 *.swp
 *.DS_Store
 *.vs_code
-
-.gitignore
 briffard.filler
 *.txt
 *.trace
+*.result
