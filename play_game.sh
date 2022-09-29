@@ -13,7 +13,6 @@ MYWIN=0
 
 
 mkdir -p $PWD/SCORE/$PLAYER
-
 for MAP in $MAPS
 do
     STRMAP=$(echo $MAP |  cut -d '/' -f 4)
@@ -54,7 +53,7 @@ do
                 MYWIN=$(( $MYWIN + 1 ))
             fi
 		    if [ "$P2" == "$PLAYER" ]; then
-                MYWIN=$(( $MYWIN + 1 ))
+                ENEMYWIN=$(( $ENEMYWIN + 1 ))
             fi
         fi
         rm -f $PWD/SCORE/$PLAYER/$STRMAP.result

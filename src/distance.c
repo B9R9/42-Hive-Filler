@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 13:46:37 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/29 13:48:10 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:15:44 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	define_distance(t_filler *info, t_piece *piece, t_coords *ref)
 	while (i < piece->size)
 	{
 		if (ref[i].data)
-			get_distance(&ret, info->oppBlocks, ref[i]);
+			get_distance(&ret, info->oppblocks, ref[i]);
 		i++;
 	}
 	return (ret);

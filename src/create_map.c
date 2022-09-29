@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 13:25:49 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/29 13:32:39 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:17:03 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,12 +105,13 @@ int	new_map(t_filler **info)
 	(*info)->map2d = set_map2d(*info, 4);
 	if (!(*info)->map2d)
 		return (1);
-	(*info)->myBlocks = set_list_block(*info, (*info)->you, (*info)->myBlocks);
-	if (!(*info)->myBlocks)
+	(*info)->mybloacks = set_list_block(*info, \
+			(*info)->you, (*info)->mybloacks);
+	if (!(*info)->mybloacks)
 		return (1);
-	(*info)->oppBlocks = set_list_block(*info, \
-			(*info)->opp, (*info)->oppBlocks);
-	if (!(*info)->oppBlocks)
+	(*info)->oppblocks = set_list_block(*info, \
+			(*info)->opp, (*info)->oppblocks);
+	if (!(*info)->oppblocks)
 		return (1);
 	(*info)->size = (*info)->row * (*info)->col;
 	return (0);

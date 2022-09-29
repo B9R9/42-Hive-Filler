@@ -6,7 +6,7 @@
 #    By: briffard <briffard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/12 08:21:48 by briffard          #+#    #+#              #
-#    Updated: 2022/09/23 10:36:56 by briffard         ###   ########.fr        #
+#    Updated: 2022/08/03 12:01:51 by briffard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,8 +38,8 @@ FILES	= ft_putchar.c		ft_putchar_fd.c		ft_putendl.c		ft_tolower.c\
 	ft_strclr.c			ft_strdel.c			ft_strsub.c			ft_striter.c\
 	ft_striteri.c		ft_memalloc.c		ft_memchr.c			ft_memcmp.c	\
 	ft_memdel.c			ft_memmove.c		ft_strmapi.c		ft_strmap.c	\
-	ft_strsplit.c		ft_cleanstr.c		ft_color.c						\
-	ft_putstrcolor.c	ft_putcharcolor.c	ft_printbits.c					\
+	ft_strsplit.c		ft_cleanstr.c		ft_color.c			ft_min.c	\
+	ft_putstrcolor.c	ft_putcharcolor.c	ft_printbits.c		ft_max.c		\
 	ft_numlength.c		ft_randomnbr.c 		ft_display_file.c				\
 	ft_get_next_line.c	ft_swap.c			ft_abs_float.c		ft_isupper.c\
 	ft_u_itoa.c 		ft_ll_itoa.c		ft_l_itoa.c						\
@@ -60,9 +60,9 @@ FTPRINTF_OBJS	=	$(addprefix $(OBJ_DIR), $(FT_PRINTF_SRC:%.c=%.o))
 all: $(NAME)
 
 $(NAME): $(LFT_OBJS) $(FTPRINTF_OBJS)
-	@echo "Creation of libft"
+	@echo "Creation of libftprintf"
 	@ar rcs $(NAME) $(LFT_OBJS) $(FTPRINTF_OBJS)
-	@echo "Libft created."
+	@echo "Libftprintf created."
 	@ranlib $(NAME)
 
 $(OBJ_DIR)%.o:$(SRC_DIR)%.c
@@ -75,11 +75,11 @@ $(OBJ_DIR)%.o:$(FTPRINTF_DIR)%.c
 
 clean:
 	@$(RM_DIR) $(OBJ_DIR)
-	@echo "LIBFT: Object Files directory has been deleted"
+	@echo "Object Files directory has been deleted"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "LIBFT: libft.a file has been deleted"
+	@echo "libftprintf.a file has been deleted"
 
 re: fclean all
 

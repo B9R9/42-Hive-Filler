@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 13:43:58 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/29 13:46:31 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:16:03 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	init_game(t_filler *info)
 	info->size = 0;
 	info->dist = 0;
 	info->solution = (t_coords){0, 0, 0};
-	info->myBlocks = NULL;
-	info->oppBlocks = NULL;
+	info->mybloacks = NULL;
+	info->oppblocks = NULL;
 	info->map2d = NULL;
 	info->strmap = NULL;
 }

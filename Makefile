@@ -6,7 +6,7 @@
 #    By: briffard <briffard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/03 11:42:00 by briffard          #+#    #+#              #
-#    Updated: 2022/09/23 10:46:14 by briffard         ###   ########.fr        #
+#    Updated: 2022/09/29 12:41:41 by briffard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,6 @@ NAME = briffard.filler
 CC		=	gcc
 CCFLAGS	=	-Werror -Wextra -Wall
 LIB_LFT	=	-L ./libft/ -lft
-LIBFT	=	./libft/libft.a
 
 #INCLUDE
 INCL	=	-I ./include
@@ -28,48 +27,53 @@ RM		=	rm	-f
 
 #SOURCE FILES
 SRC_DIR	=	./src/
-FILES	=	can_we_place.c \
-			clean.c \
-			exit.c \
-			list_handler.c \
-			main.c \
-			malloc.c \
-			set_game.c \
-			set_hmap_2.c \
-			set_hmap.c \
-			set_piece.c \
-			set_test.c \
-			set_test_2.c \
-			solver.c \
-			tools_2.c \
-			tools.c \
+FILES	= create_map.c	\
+		can_we_place.c	\
+		create_piece.c	\
+		create_struct.c	\
+		distance.c		\
+		exit.c			\
+		free.c			\
+		main.c			\
+		set_info.c		\
+		solver.c		\
+		tools.c			\
+		update.c		\
 
 #OBJECT FILES
 OBJ_DIR			=	./objectFiles/
 OBJS		=	$(addprefix $(OBJ_DIR), $(FILES:%.c=%.o))
 
-all: $(NAME) 
+all: $(NAME)
 
-$(NAME): $(LIBFT) $(OBJS) 
+$(NAME): $(OBJS)
 	@$(CC) $(CCFLAGS) -o $(NAME) $(OBJS) $(LIB_LFT)
-	@echo "$(NAME) has been created"
-
-$(LIBFT):
-	@make -C ./libft
 
 $(OBJ_DIR)%.o:$(SRC_DIR)%.c
 	@mkdir -p $(OBJ_DIR)
 	@$(CC) $(CCFLAGS) $(INCL_LFT) $(INCL) -o $@ -c $<
 
+lft:
+	@make -sC ./libft/ all
+
+re_lft:
+	@make -sC ./libft/ re
+
+clean_lft:
+	@make -sC ./libft/ clean
+
+fclean_lft:
+	@make -sC ./libft/ fclean
+
 clean:
 	@$(RM_DIR) $(OBJ_DIR)
-	@echo "FILLER: Object Files have been deleted"
-	@make -C ./libft clean
+	@echo "Object Files have been deleted"
+	@$(RM) *.txt
+	@$(RM) *.trace
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "FILLER: Player file has been deleted"
-	@make -C ./libft fclean
+	@echo "Player file has been deleted"
 
 re: fclean all
 

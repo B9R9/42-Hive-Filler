@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/01 14:08:45 by briffard          #+#    #+#             */
-/*   Updated: 2022/08/09 15:24:53 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/29 13:20:32 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,8 @@ void				ft_swap(int	*a, int *b);
 /*maths_lib*/
 double				ft_abs_float(double value);
 long long			ft_abs_int(long long value);
+int					ft_min(int a, int b);
+int					ft_max(int a, int b);
 unsigned long long	ft_numlength(unsigned long long int n);
 
 #endif

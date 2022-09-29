@@ -6,7 +6,7 @@
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 13:59:09 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/29 14:01:13 by briffard         ###   ########.fr       */
+/*   Updated: 2022/09/29 15:16:03 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	**update_map(t_filler *info, t_piece *piece)
 	if (!ref_block)
 		return (NULL);
 	init_coord(coords, piece->size);
-	coord_generator(coords, ref_block, piece->list, piece->list);
+	coord_gen(coords, ref_block, piece->list, piece->list);
 	while (i < piece->size)
 	{
 		if (coords[i].data)
@@ -76,11 +76,11 @@ int	update_info(t_filler *info, t_piece *piece)
 	info->map2d = update_map_opp(info);
 	if (!info->map2d)
 		return (1);
-	info->myBlocks = set_list_block(info, info->you, info->myBlocks);
-	if (!info->myBlocks)
+	info->mybloacks = set_list_block(info, info->you, info->mybloacks);
+	if (!info->mybloacks)
 		return (1);
-	info->oppBlocks = set_list_block(info, info->opp, info->oppBlocks);
-	if (!info->oppBlocks)
+	info->oppblocks = set_list_block(info, info->opp, info->oppblocks);
+	if (!info->oppblocks)
 		return (1);
 	return (0);
 }

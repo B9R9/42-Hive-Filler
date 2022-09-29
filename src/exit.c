@@ -5,36 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: briffard <briffard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/22 14:45:36 by briffard          #+#    #+#             */
-/*   Updated: 2022/09/23 11:15:17 by briffard         ###   ########.fr       */
+/*   Created: 2022/09/29 13:48:24 by briffard          #+#    #+#             */
+/*   Updated: 2022/09/29 15:16:03 by briffard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-t_filler	*clean_before_exit(t_filler *info)
+t_filler	*clean_filler(t_filler *info)
 {
-	if (info->line)
-		ft_strdel(&info->line);
-	if (info->hmap)
-		freearray(info->hmap, info->map.row);
-	if (info->test)
-		freearray(info->test, info->map.row);
-	if (info->li_blocks)
-		info->li_blocks = clean_list(info->li_blocks);
-	if (info->li_piece)
-		info->li_piece = clean_list(info->li_piece);
-	if (info->map2d)
-		free(info->map2d);
-	if (info->strmap)
-		ft_strdel(&info->strmap);
+	if (info->mybloacks)
+		info->mybloacks = clean_list(info->mybloacks);
+	if (info->oppblocks)
+		info->oppblocks = clean_list(info->oppblocks);
+	ft_strdel(&info->strmap);
+	free(info->map2d);
+	info->map2d = NULL;
 	free(info);
+	info = NULL;
 	return (NULL);
 }
 
-void	panic(char *mess, t_filler *info)
+t_piece	*clean_piece(t_piece *piece)
 {
-	perror(mess);
-	info = clean_before_exit(info);
-	exit (EXIT_FAILURE);
+	if (piece->list)
+		piece->list = clean_list(piece->list);
+	free(piece);
+	piece = NULL;
+	return (NULL);
 }
