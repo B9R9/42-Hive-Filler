@@ -1,0 +1,640 @@
+Process:         briffard.filler [98180]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x10aa69000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [98175]
+
+Date/Time:       2022-09-29 11:44:18.810 +0300
+Launch Time:     2022-09-29 11:42:23.241 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 98180: 162 nodes malloced for 14 KB
+Process 98180: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [98548]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x10c0c9000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [98544]
+
+Date/Time:       2022-09-29 11:45:58.764 +0300
+Launch Time:     2022-09-29 11:45:58.487 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 98548: 162 nodes malloced for 14 KB
+Process 98548: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [98565]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x10e911000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [98560]
+
+Date/Time:       2022-09-29 11:45:59.131 +0300
+Launch Time:     2022-09-29 11:45:58.864 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 98565: 162 nodes malloced for 14 KB
+Process 98565: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [98581]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x100a15000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [98577]
+
+Date/Time:       2022-09-29 11:45:59.518 +0300
+Launch Time:     2022-09-29 11:45:59.237 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 98581: 162 nodes malloced for 14 KB
+Process 98581: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [98601]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x10b276000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [98596]
+
+Date/Time:       2022-09-29 11:45:59.882 +0300
+Launch Time:     2022-09-29 11:45:59.617 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 98601: 162 nodes malloced for 14 KB
+Process 98601: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [98616]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x10af82000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [98612]
+
+Date/Time:       2022-09-29 11:46:00.260 +0300
+Launch Time:     2022-09-29 11:45:59.986 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 98616: 162 nodes malloced for 14 KB
+Process 98616: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [98636]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x1088e9000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [98632]
+
+Date/Time:       2022-09-29 11:46:00.895 +0300
+Launch Time:     2022-09-29 11:46:00.365 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 98636: 162 nodes malloced for 14 KB
+Process 98636: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [98653]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x109cd1000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [98648]
+
+Date/Time:       2022-09-29 11:46:01.495 +0300
+Launch Time:     2022-09-29 11:46:00.999 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 98653: 162 nodes malloced for 14 KB
+Process 98653: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [98669]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x109a71000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [98665]
+
+Date/Time:       2022-09-29 11:46:02.156 +0300
+Launch Time:     2022-09-29 11:46:01.591 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 98669: 162 nodes malloced for 14 KB
+Process 98669: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [98686]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x109a10000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [98681]
+
+Date/Time:       2022-09-29 11:46:02.774 +0300
+Launch Time:     2022-09-29 11:46:02.255 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 98686: 162 nodes malloced for 14 KB
+Process 98686: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [98704]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x101afd000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [98699]
+
+Date/Time:       2022-09-29 11:46:03.387 +0300
+Launch Time:     2022-09-29 11:46:02.872 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 98704: 162 nodes malloced for 14 KB
+Process 98704: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [98724]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x1065cd000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [98720]
+
+Date/Time:       2022-09-29 11:47:45.891 +0300
+Launch Time:     2022-09-29 11:46:03.494 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 98724: 162 nodes malloced for 14 KB
+Process 98724: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [98920]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x102716000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [98915]
+
+Date/Time:       2022-09-29 11:48:34.817 +0300
+Launch Time:     2022-09-29 11:47:45.988 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 98920: 162 nodes malloced for 14 KB
+Process 98920: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [99012]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x10ebe2000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [99008]
+
+Date/Time:       2022-09-29 11:50:26.626 +0300
+Launch Time:     2022-09-29 11:48:34.914 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 99012: 162 nodes malloced for 14 KB
+Process 99012: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [99310]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x10b72b000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [99305]
+
+Date/Time:       2022-09-29 11:52:00.056 +0300
+Launch Time:     2022-09-29 11:50:26.723 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 99310: 162 nodes malloced for 14 KB
+Process 99310: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [99467]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x10f6ff000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [99463]
+
+Date/Time:       2022-09-29 11:53:51.615 +0300
+Launch Time:     2022-09-29 11:52:00.161 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 99467: 162 nodes malloced for 14 KB
+Process 99467: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [8878]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x1097b9000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [8874]
+
+Date/Time:       2022-09-29 13:06:37.561 +0300
+Launch Time:     2022-09-29 13:06:37.316 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 8878: 162 nodes malloced for 14 KB
+Process 8878: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [8896]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x108edb000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [8891]
+
+Date/Time:       2022-09-29 13:06:37.985 +0300
+Launch Time:     2022-09-29 13:06:37.702 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 8896: 162 nodes malloced for 14 KB
+Process 8896: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [8912]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x106e7d000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [8908]
+
+Date/Time:       2022-09-29 13:06:38.367 +0300
+Launch Time:     2022-09-29 13:06:38.082 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 8912: 162 nodes malloced for 14 KB
+Process 8912: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [8930]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x104a31000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [8925]
+
+Date/Time:       2022-09-29 13:06:38.734 +0300
+Launch Time:     2022-09-29 13:06:38.464 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 8930: 162 nodes malloced for 14 KB
+Process 8930: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [8947]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x105682000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [8943]
+
+Date/Time:       2022-09-29 13:06:39.111 +0300
+Launch Time:     2022-09-29 13:06:38.831 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 8947: 162 nodes malloced for 14 KB
+Process 8947: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [8967]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x101749000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [8963]
+
+Date/Time:       2022-09-29 13:06:39.769 +0300
+Launch Time:     2022-09-29 13:06:39.215 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 8967: 162 nodes malloced for 14 KB
+Process 8967: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [8984]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x10c4a1000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [8979]
+
+Date/Time:       2022-09-29 13:06:40.364 +0300
+Launch Time:     2022-09-29 13:06:39.865 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 8984: 162 nodes malloced for 14 KB
+Process 8984: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [9000]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x1056ce000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [8996]
+
+Date/Time:       2022-09-29 13:06:41.024 +0300
+Launch Time:     2022-09-29 13:06:40.463 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 9000: 162 nodes malloced for 14 KB
+Process 9000: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [9017]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x10876e000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [9012]
+
+Date/Time:       2022-09-29 13:06:41.668 +0300
+Launch Time:     2022-09-29 13:06:41.119 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 9017: 162 nodes malloced for 14 KB
+Process 9017: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [9032]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x10458a000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [9028]
+
+Date/Time:       2022-09-29 13:06:42.312 +0300
+Launch Time:     2022-09-29 13:06:41.764 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 9032: 162 nodes malloced for 14 KB
+Process 9032: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [9053]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x109693000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [9049]
+
+Date/Time:       2022-09-29 13:08:29.938 +0300
+Launch Time:     2022-09-29 13:06:42.414 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 9053: 162 nodes malloced for 14 KB
+Process 9053: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [9222]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x10b076000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [9217]
+
+Date/Time:       2022-09-29 13:10:03.370 +0300
+Launch Time:     2022-09-29 13:08:30.038 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 9222: 162 nodes malloced for 14 KB
+Process 9222: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [9372]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x1020bc000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [9368]
+
+Date/Time:       2022-09-29 13:11:30.367 +0300
+Launch Time:     2022-09-29 13:10:03.467 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 9372: 162 nodes malloced for 14 KB
+Process 9372: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [9499]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x1099ef000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [9494]
+
+Date/Time:       2022-09-29 13:13:06.004 +0300
+Launch Time:     2022-09-29 13:11:30.466 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 9499: 162 nodes malloced for 14 KB
+Process 9499: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [9700]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x10a65c000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [9696]
+
+Date/Time:       2022-09-29 13:13:47.659 +0300
+Launch Time:     2022-09-29 13:13:06.104 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 9700: 162 nodes malloced for 14 KB
+Process 9700: 0 leaks for 0 total leaked bytes.
+
+Process:         briffard.filler [13832]
+Path:            /Volumes/VOLUME/*/briffard.filler
+Load Address:    0x10a2fc000
+Identifier:      briffard.filler
+Version:         ???
+Code Type:       X86-64
+Parent Process:  ruby [13827]
+
+Date/Time:       2022-09-29 13:42:16.163 +0300
+Launch Time:     2022-09-29 13:42:03.146 +0300
+OS Version:      Mac OS X 10.14.6 (18G9323)
+Report Version:  7
+Analysis Tool:   /Applications/Xcode.app/Contents/Developer/usr/bin/leaks
+Analysis Tool Version:  Xcode 11.3.1 (11C505)
+----
+
+leaks Report Version: 4.0
+Process 13832: 162 nodes malloced for 14 KB
+Process 13832: 0 leaks for 0 total leaked bytes.
+
