@@ -6,7 +6,7 @@
 #    By: briffard <briffard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/03 11:42:00 by briffard          #+#    #+#              #
-#    Updated: 2022/09/29 12:41:41 by briffard         ###   ########.fr        #
+#    Updated: 2022/09/29 16:07:53 by briffard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ LIB_LFT	=	-L ./libft/ -lft
 #INCLUDE
 INCL	=	-I ./include
 INCL_LFT=	-I ./libft/includes
+LIBFT	=	./libft/libft.a
 
 #CLEAN & FCLEAN
 RM_DIR	=	rm -rf
@@ -45,35 +46,27 @@ OBJ_DIR			=	./objectFiles/
 OBJS		=	$(addprefix $(OBJ_DIR), $(FILES:%.c=%.o))
 
 all: $(NAME)
+	@echo "Player Created"
 
-$(NAME): $(OBJS)
+$(NAME): $(LIBFT) $(OBJS)
 	@$(CC) $(CCFLAGS) -o $(NAME) $(OBJS) $(LIB_LFT)
 
 $(OBJ_DIR)%.o:$(SRC_DIR)%.c
 	@mkdir -p $(OBJ_DIR)
 	@$(CC) $(CCFLAGS) $(INCL_LFT) $(INCL) -o $@ -c $<
 
-lft:
-	@make -sC ./libft/ all
-
-re_lft:
-	@make -sC ./libft/ re
-
-clean_lft:
-	@make -sC ./libft/ clean
-
-fclean_lft:
-	@make -sC ./libft/ fclean
+$(LIBFT):
+	@make -C ./libft/ 
 
 clean:
 	@$(RM_DIR) $(OBJ_DIR)
 	@echo "Object Files have been deleted"
-	@$(RM) *.txt
-	@$(RM) *.trace
+	@make -C ./libft/ clean
 
 fclean: clean
 	@$(RM) $(NAME)
 	@echo "Player file has been deleted"
+	@make -C ./libft/ fclean
 
 re: fclean all
 
